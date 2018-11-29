@@ -1,0 +1,38 @@
+@font-face{
+	font-family : "BebasNeue";
+	src : url("fonts/BebasNeue Bold.otf") format('truetype');
+} 
+
+body{
+	margin : 0;
+	background :  #9a25e6;
+}
+
+header img{
+	width : 150px;
+
+}
+
+header h4{
+	margin-left : 20px;
+	margin-top: 0px;
+	color : #646fc1;
+}
+header h1{
+	margin-bottom : 0px;
+	color : #9a25e6;
+}
+header hgroup{
+	font-family: "BebasNeue";
+	margin-top : 0px;
+	position : relative;
+	left: -20px;
+}
+header{
+	width : 350px;
+	display:flex;
+}
+#header_nav{
+	background-image : linear-gradient(to bottom right, white, #9a25e6);
+	border-radius : 8px;
+}
