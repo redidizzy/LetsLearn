@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="../style.css"/>
+		<title> Apprendre le CSS </title>
+	</head>
+	<body>
+		<div id="header_nav">
+			<header>	
+				<a href="index.html"><img src="../logo.png"></a><hgroup><h1>Let's Learn</h1><h4>Apprenons tous ensemble</h4></hgroup>
+			</header>
+			<nav id="menu">
+				<ul>
+					<li><a href="../index.html">Accueil</a></li>
+					<li><a href="#introduction">Introduction</a></li>
+					<li><a href="#mettreEnPlaceCss">Mettre en place le css</a></li>
+					<li><a href="#couleurFont">La couleur et le font</a></li>
+					<li><a href="#bordureOmbre">Les bordures et les ombres</a></li>
+					<li><a href="#proprietesCss">Propriétés Css</a></li>
+				</ul>
+			</nav>
+		</div>
+		<main>	
+			<section id="introduction">
+				<header>
+					<h1>Introduction</h1>
+				</header>
+				<p>
+					Les feuilles de style en cascade1, généralement appelées CSS de l'anglais Cascading Style Sheets, forment un langage informatique qui décrit 
+					la présentation des documents HTML et XML. Les standards définissant CSS sont publiés par le World Wide Web Consortium (W3C). Introduit au 
+					milieu des années 1990, CSS devient couramment utilisé dans la conception de sites web et bien pris en charge par les navigateurs web dans 
+					les années 2000.
+				</p>	
+				<article>
+				
+					<header>
+						<h2>Histoire du css</h2>
+					</header>
+					<p>
+						<strong>CSS</strong> C'est lui qui vous permet de choisir la couleur de votre texte.
+						Lui qui vous permet de sélectionner la police utilisée sur votre site.
+						Lui encore qui permet de définir la taille du texte, les bordures, le fond…
+						Et aussi, c'est lui qui permet de faire la mise en page de votre site. Vous pourrez dire : je veux que mon menu soit à gauche et occupe telle largeur, 
+						que l'en-tête de mon site soit calé en haut et qu'il soit toujours visible, etc.
+					</p>
+					<p>
+						Il faut savoir qu'aux débuts du Web, CSS n'existait pas. En fait, il n'y avait initialement que le langage HTML.
+						Le HTML est né en 1991 et CSS en 1996. Alors, vous vous dites sûrement : comment faisait-on la mise en forme de 1991 à 1996 ? Eh bien, 
+						uniquement en HTML ! Il y avait en effet des balises HTML dédiées à la mise en forme.<pre>&lt;font color="#aab1c3"&gt;</pre>, par exemple, permettait de définir 
+						la couleur du texte.
+						Cependant, les pages HTML commençaient à devenir assez complexes. Il y avait de plus en plus de balises et c'était un joyeux mélange entre le 
+						fond et la forme, qui rendait la mise à jour des pages web de plus en plus complexe. C'est pour cela que l'on a créé le langage CSS.
+						Cependant, le CSS n'a pas été adopté immédiatement par les webmasters, loin de là. Il fallait se défaire de certaines mauvaises habitudes et 
+						cela a pris du temps. Encore aujourd'hui, on peut trouver des sites web avec des balises HTML de mise en forme, anciennes et obsolètes.
+					</p>
+					
+				</article>
+				<article>
+					<header>
+						<h2>Les versions du css </h2>
+					</header>
+					<ul>
+						<li>Css1</li>
+						<li>Css2.0</li>
+						<li>Css2.1</li>
+						<li>Css3</li>
+					</ul>
+					<p>
+						 la version <strong>CSS 3</strong> n'est pas encore totalement finalisée (ce n'est pas encore une version officielle). Cependant, elle est bien 
+						 avancée et aujourd'hui déjà bien prise en charge par de nombreux navigateurs, ce qui fait qu'on peut déjà s'en servir.</br>
+						 Il serait dommage de passer à côté car <strong>CSS 3</strong> apporte de nombreuses fonctionnalités à CSS (leur nombre double par rapport à CSS 2.1 !). 						 Nous nous baserons donc dans ce cours sur CSS 3, qui reprend et complète la plupart des fonctionnalités de <strong>CSS 2.1</strong>.
+					</p>
+					
+				</article>
+			
+			</section>
+			
+			<!-- 1er chapitre -->
+			
+			<section id="mettreEnPlaceCss">
+				<header>
+					<h1>Mettre en place le css </h1>
+				</header>
+				<h2>Ou est ce que on ecrit en css ?</h2>
+				<p>
+					Vous avez le choix car on peut écrire du code en langage CSS à trois endroits différents :
+					<ul>
+						<li>dans un fichier.css(méthode la plus recommandée) ;</li>
+						<li>dans l'en-tête<pre>&lt;head&gt;</pre>du fichier HTML ;<li>
+						<li>directement dans les balises du fichier HTML via un attribut style(méthode la moins recommandée).</li>
+					</ul>
+					Je vais vous présenter ces trois méthodes mais sachez d'ores et déjà que la première… est la meilleure.
+				</p>
+				<h3>Dans un fichier.css(recommandé)</h3>
+				<p>
+					Comme je viens de vous le dire, on écrit le plus souvent le code CSS dans un fichier spécial ayant l'extension.css(contrairement aux fichiers 
+					HTML qui ont l'extension.html). C'est la méthode la plus pratique et la plus souple. Cela nous évite de tout mélanger dans un même fichier. 
+					J'utiliserai cette technique dans toute la suite de ce cours.
+					Commençons à pratiquer dès maintenant ! Nous allons partir du fichier HTML suivant :
+					<img src="images/1.png"/>
+					Vous noterez le contenu de la ligne 5,<pre>&lt;link rel="stylesheet" href="style.css"/&gt;</pre>: c'est elle qui indique que ce fichier HTML est 
+					associé à un fichier appeléstyle.csset chargé de la mise en forme.
+					Enregistrez ce fichier sous le nom que vous voulez (par exemple page.html). Pour le moment, rien d'extraordinaire à part la nouvelle balise que 
+					nous avons ajoutée.
+					Maintenant, créez un nouveau fichier vide dans votre éditeur de texte (par exemple Sublime Text) et copiez-y ce bout de code CSS :
+					<img rel="images/2.png"/>
+					Enregistrez le fichier en lui donnant un nom qui se termine par<strong>.css</strong>, commestyle.css. Placez ce fichier.cssdans le même dossier que votre fichier<strong>.html<strong>.</br>
+					Ouvrez maintenant votre fichierpage.htmldans votre navigateur pour le tester, comme vous le faites d'habitude. Regardez, c'est magique : 
+					vos paragraphes sont écrits en bleu.
+				
+				</p>
+				<h3>Dans l'en-tête<pre>&lt;head&gt;</pre>du fichier HTML</h3>
+				<p>
+					Il existe une autre méthode pour utiliser du CSS dans ses fichiers HTML : cela consiste à insérer le code CSS directement dans une 
+					balise<pre>&lt;style&gt;</pre>à l'intérieur de l'en-tête<pre>&lt;head&gt;</pre>.
+					Voici comment on peut obtenir exactement le même résultat avec un seul fichier.html qui contient le code CSS (lignes 5 à 10) :
+					<img src="images/4.png"/>
+				</p>
+				<h3>Directement dans les balises du fichier HTML via un attribut style</h3>
+				<p>
+					Dernière méthode, à manipuler avec précaution : vous pouvez ajouter un attribut style à n'importe quelle balise. Vous insérerez votre 
+					code CSS directement dans cet attribut.
+					
+				</p>
+				<footer>
+					<a href="#menu">Retour</a>
+				</footer>
+			</section>
+			
+			<!-- 2eme chapitre -->
+			
+			<section id="couleurFont">
+				<header>
+					<h1>La couleur et le font </h1>
+				</header>
+				<p>
+					Continuons notre tour d'horizon des propriétés CSS existantes. Nous allons nous intéresser ici aux propriétés liées de près ou de loin à la 
+					couleur.
+				</p>	
+				<h2>Mettre une couleur ou une image d'arrière-plan</h2>
+				<section>
+					<h3>Couleur de fond</h3>
+					<p>
+						Pour indiquer une couleur de fond, on utilise la propriété CSSbackground-color. Elle s'utilise de la même manière que la 
+						propriétécolor, c'est-à-dire que vous pouvez taper le nom d'une couleur, l'écrire en notation hexadécimale ou encore utiliser la 
+						méthode RGB.</br>
+						Pour indiquer la couleur de fond de la page web, il faut travailler sur la balise<pre style=" display:inline; color:red;">&lt;body&gt;</pre>. Eh oui,<pre>&lt;body&gt;</pre>correspond 
+						à l'ensemble de la page web, c'est donc en modifiant sa couleur de fond que l'on changera la couleur d'arrière-plan de la page.
+						Regardez très attentivement ce code CSS :
+						<img src="images/6.png" alt="code css"/>
+						Voici le rendu de ce code :
+						<img src="images/7.png" alt="rendu du code"/>
+					</p>
+						
+					<h4>Le css et l'heritage</h4>
+					<p>
+						En CSS, si vous appliquez un style à une balise, toutes les balises qui se trouvent à l'intérieur prendront le même style.
+						C'est en fait simple à comprendre et intuitif. La balise<pre>&lt;body&gt;</pre>, vous le savez, contient entre autres les balises de paragraphe
+						<pre>&lt;p&gt;</pre>et de titre<pre>&lt;h1&gt;</pre>.</br>
+						Si j'applique une couleur de fond noire et une couleur de texte blanche à la balise<pre>&lt;body&gt;</pre>, tous mes 
+						titres et paragraphes auront eux aussi un arrière-plan de couleur noire et un texte de couleur blanche… C'est ce phénomène qu'on 
+						appelle l'héritage : on dit que les balises qui se trouvent à l'intérieur d'une autre balise « héritent » de ses propriétés.
+					</p>
+				</section>
+						
+				<section>
+					<h3>Image de fond</h3>
+					<p>
+						Dans les exemples qui suivent, je vais modifier l'image de fond de la page. Cependant, tout comme pour la couleur de fond, n'oubliez 
+						pas que l'image de fond ne s'applique pas forcément à la page entière. On peut aussi mettre une image de fond derrière les titres, 
+						paragraphes, etc.
+						Appliquer une image de fond
+						La propriété permettant d'indiquer une image de fond estbackground-image. Comme valeur, on doit renseignerurl("nom_de_l_image.png").</br> 
+						Par exemple :
+					</p>
+					<img src="images/9.png"/>
+					<p>
+						Ce qui nous donne la figure suivante
+					</p>
+					<img src="images/8.png"/>
+					<p>
+						Bien entendu, votre fond n'est pas forcément en PNG, il peut aussi être en JPEG ou en GIF.
+						L'adresse indiquant où se trouve l'image de fond peut être écrite en absolu (http://…) ou en relatif (fond.png).
+					</p>
+				</section>
+					<footer>
+						<a href="#menu">Retour</a>
+					</footer>
+				
+			</section>
+				
+			<section id="bordureOmbre">
+				<header>
+					<h2>Ajouter des ombres</h2>
+				</header>
+				<p>
+					Les ombres font partie des nouveautés récentes proposées par CSS3. Aujourd'hui, il suffit d'une seule ligne de CSS pour ajouter 
+					des ombres dans une page !
+					Nous allons ici découvrir deux types d'ombres : 
+					<ul>
+						<li>les ombres des boîtes</li>
+						<li>les ombres du texte</li>
+					</ul>	
+				</p>
+				
+				<section>
+					<h3>"box-shadow" les ombres des boîtes</h3>
+					<p>
+						La propriété box-shadow s'applique à tout le bloc et prend quatre valeurs dans l'ordre suivant :
+						<ol>
+							<li>le décalage horizontal de l'ombre </li>
+							<li>le décalage vertical de l'ombre</li>
+							<li>l'adoucissement du dégradé</li>
+							<li>la couleur de l'ombre</li>
+						</ol>
+					</p>
+				</section>
+					
+				<section>
+					<h3>"text-shadow" l'ombre du texte</h3>
+					<p>
+						Avec text-shadow, vous pouvez ajouter une ombre directement sur les lettres de votre texte ! Les valeurs fonctionnent exactement de la même 
+						façon quebox-shadow: décalage, adoucissement et couleur.
+					</p>
+				</section>
+					<footer>
+						<a href="#menu">Retour</a>
+					</footer>
+			</section>
+				
+				<!-- chapitre 4 -->
+				
+			<section id="proprietesCss">
+				
+				<h1>Propriétés Css</h1>
+				<table border="1">
+					<caption>Propriétés de mise en forme du texte</caption>
+					<thead>
+						<tr>
+							<th>Propriété</th>
+							<th>Valeurs (exemples)</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>font-family</td>
+							<td>police1, police2, police3, serif, sans-serif, monospace</td>
+							<td>Nom de police</td>
+						</tr>
+						<tr>
+							<td>@font-face</td>
+							<td>Nom et source de la police</td>
+							<td>Police personnalisée</td>
+						</tr>
+						<tr>
+							<td>font-size</td>
+							<td>1.3em, 16px, 120%...</td>
+							<td>Taille du texte</td>
+						</tr>
+						<tr>
+							<td>font-weight</td>
+							<td>bold, normal</td>
+							<td>Gras</td> 
+						</tr>
+						<tr>
+							<td>font-style</td>
+							<td>italic, oblique, normal</td>
+							<td>Italique</td> 
+						</tr>
+						<tr>
+							<td>text-decoration</td>
+							<td>underline, overline, line-through, blink, none</td>
+							<td>Soulignement, ligne au-dessus, barré ou clignotant</td> 
+						</tr>
+						<tr>
+							<td>font-variant</td>
+							<td>small-caps, normal</td>
+							<td>Petites capitales</td> 
+						</tr>
+						<tr>
+							<td>text-transform</td>
+							<td>capitalize, lowercase, uppercase</td>
+							<td>Capitales</td> 
+						</tr>
+						<tr>
+							<td>font</td>
+							<td></td>
+							<td>Super propriété de police. Combine : font-weight, font-style, font-size, font-variant, font-family.</td> 
+						</tr>
+						<tr>
+							<td>text-align</td>
+							<td>left, center, right, justify</td>
+							<td>Alignement horizontal</td> 
+						</tr>
+						<tr>
+							<td>vertical-align</td>
+							<td>baseline, middle, sub, super, top, bottom</td>
+							<td>Alignement vertical (cellules de tableau ou éléments inline-block uniquement)</td> 
+						</tr>
+						<tr>
+							<td>line-height</td>
+							<td>18px, 120%, normal...</td>
+							<td>Hauteur de ligne</td> 
+						</tr>
+						<tr>
+							<td>text-indent</td>
+							<td>25px</td>
+							<td>Alinéa</td> 
+						</tr>
+						<tr>
+							<td>white-space</td>
+							<td>pre, nowrap, normal</td>
+							<td>Césure</td> 
+						</tr>
+						<tr>
+							<td>word-wrap</td>
+							<td>break-word, normal</td>
+							<td>Césure forcée</td> 
+						</tr>
+						<tr>
+							<td>text-shadow</td>
+							<td>5px 5px 2px blue</td>
+							<td>(horizontale, verticale, fondu, couleur)</td> 
+						</tr>
+						<tr>
+							<td>Ombre de texte</td>
+							<td>Propriétés de couleur et de fond</td>
+							<td></td> 
+						</tr>
+					
+					</tbody>
+				</table>
+
+				<table border="1">
+					<caption>Propriétés de couleur et de fond</caption>
+					<thead>
+						<tr>
+							<th>Propriété</th>
+							<th>Valeurs (exemples)</th>
+							<th>Description</th>
+						</tr>
+						</thead>
+					<tbody>
+						<tr>
+							<td>color</td>
+							<td>nom, rgb(rouge,vert,bleu), rgba(rouge,vert,bleu,transparence), #CF1A20...</td>
+							<td>Couleur du texte</td> 
+						</tr>
+						<tr>
+							<td>background-color</td>
+							<td>Identique à color</td>
+							<td>Couleur de fond</td> 
+						</tr>
+						<tr>
+							<td>background-image</td>
+							<td>url('image.png')</td>
+							<td>Image de fond</td> 
+						</tr>
+						<tr>
+							<td>background-attachment</td>
+							<td>fixed, scroll</td>
+							<td>Fond fixe</td> 
+						</tr>
+						<tr>
+							<td>background-repeat</td>
+							<td>repeat-x, repeat-y, no-repeat, repeat</td>
+							<td>Répétition du fond</td> 
+						</tr>
+						<tr>
+							<td>background-position</td>
+							<td>(x y), top, center, bottom, left, right</td>
+							<td>Position du fond</td> 
+						</tr>
+						<tr>
+							<td>background</td>
+							<td></td>
+							<td>Super propriété du fond. Combine : background-image, background-repeat, background-attachment, background-position</td> 
+						</tr>
+						<tr>
+							<td>opacity</td>
+							<td>0.5</td>
+							<td>Transparence</td> 
+						</tr>
+						
+					</tbody>
+				</table>
+					
+					
+				<table border="1">
+					<caption>Propriétés des boîtes</caption>
+					<thead>
+						<tr>
+							<th>Propriété</th>
+							<th>Valeurs (exemples)</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>width</td>
+							<td>150px, 80%...</td>
+							<td>Largeur</td> 
+						</tr>
+						<tr>
+							<td>height</td>
+							<td>150px, 80%...</td>
+							<td>Hauteur</td> 
+						</tr>
+						<tr>
+							<td>min-width</td>
+							<td>150px, 80%...</td>
+							<td>Largeur minimale</td> 
+						</tr>
+						<tr>
+							<td>max-width</td>
+							<td>150px, 80%...</td>
+							<td>Largeur maximale</td> 
+						</tr>
+						<tr>
+							<td>min-height</td>
+							<td>150px, 80%...</td>
+							<td>Hauteur minimale</td> 
+						</tr>
+						<tr>
+							<td>max-height</td>
+							<td>150px, 80%...</td>
+							<td>Hauteur maximale</td> 
+						</tr>
+						<tr>
+							<td>margin-top</td>
+							<td>23px</td>
+							<td>Marge en haut</td> 
+						</tr>
+						<tr>
+							<td>margin-left</td>
+							<td>23px</td>
+							<td>Marge à gauche</td> 
+						</tr>
+						<tr>
+							<td>margin-right</td>
+							<td>23px</td>
+							<td>Marge à droite</td> 
+						</tr>
+						<tr>
+							<td>margin-bottom</td>
+							<td>23px</td>
+							<td>Marge en bas</td> 
+						</tr>
+						<tr>
+							<td>margin</td>
+							<td>23px 5px 23px 5px (haut, droite, bas, gauche)</td>
+							<td>Super-propriété de marge.</td> 
+						</tr>
+						<tr>
+							<td>padding-left</td>
+							<td>23px</td>
+							<td>Marge intérieure à gauche</td> 
+						</tr>
+						<tr>
+							<td>padding-right</td>
+							<td>23px</td>
+							<td>Marge intérieure à droite</td> 
+						</tr>
+						<tr>
+							<td>padding</td>
+							<td>23px 5px 23px 5px (haut, droite, bas, gauche)</td>
+							<td>Super-propriété de marge intérieure.Combine : padding-top, padding-right, padding-bottom, padding-left.</td> 
+						</tr>
+							
+					</body>
+				</table>
+			
+				<table border="1">
+					<caption>Propriétés de positionnement et d'affichage</caption>
+					<thead>
+						<tr>
+							<th>Propriété</th>
+							<th>Valeurs (exemples)</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>display</td>
+							<td>block, inline, inline-block, table, table-cell, none...</td>
+							<td>Type d'élément (block, inline, inline-block, none…)</td> 
+						</tr>
+						<tr>
+							<td>visibility</td>
+							<td>visible, hidden</td>
+							<td>Visibilité</td> 
+						</tr>
+						<tr>
+							<td>clip</td>
+							<td>rect (0px, 60px, 30px, 0px) rect (haut, droite, bas, gauche)</td>
+							<td>Affichage d'une partie de l'élément</td> 
+						</tr>
+						<tr>
+							<td>overflow</td>
+							<td>auto, scroll, visible, hidden</td>
+							<td>Comportement en cas de dépassement</td> 
+						</tr>
+						<tr>
+							<td>float</td>
+							<td>left, right, none</td>
+							<td>Flottant</td> 
+						</tr>
+						<tr>
+							<td>clear</td>
+							<td>left, right, both, none</td>
+							<td>Arrêt d'un flottant</td> 
+						</tr>
+						<tr>
+							<td>position</td>
+							<td>relative, absolute, static</td>
+							<td>Positionnement</td> 
+						</tr>
+						<tr>
+							<td>top</td>
+							<td>20px</td>
+							<td>Position par rapport au haut</td> 
+						</tr>
+						<tr>
+							<td>bottom</td>
+							<td>20px</td>
+							<td>Position par rapport au bas</td> 
+						</tr>
+						<tr>
+							<td>left</td>
+							<td>20px</td>
+							<td>Position par rapport à la gauche</td> 
+						</tr>
+						<tr>
+							<td>right</td>
+							<td>20px</td>
+							<td>Position par rapport à la droite</td> 
+						</tr>
+						<tr>
+							<td>z-index</td>
+							<td>10</td>
+							<td>Ordre d'affichage en cas de superposition. La plus grande valeur est affichée par-dessus les autres.</td> 
+						</tr>
+					</tbody>
+				</table>
+				<footer>
+					<a href="#menu">Retour</a>
+				</footer>
+			
+			</section>
+		</main>
+		
+		<footer>
+			<div>
+				<h4>Avec le soutien de l'USTHB</h4>
+				
+				<img src="../usthb.png"/>
+			</div>
+			<div id="suivezNous">
+				<h4>Suivez-nous !</h4>
+				<img src="../fb.png"/>
+				<img src="../youtube.png"/>
+				<img src="../twitter.png"/>
+			</div>	
+			<div id="contactezNous">
+				<h4>Contactez-nous</h4>
+				<address>
+					Email : auteur@gmail.com
+				</address>
+			</div>
+			Let's Learn | 2018 © Tous droits résérvés
+		</footer>
+	</body>
+</html>	
