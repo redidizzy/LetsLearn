@@ -2,12 +2,18 @@
 	font-family : "BebasNeue";
 	src : url("fonts/BebasNeue Bold.otf") format('truetype');
 } 
-
+@font-face{
+	font-family : "bebasNeue regular";
+	src:url("fonts/BebasNeue Regular.otf") format('truetype');
+}
+/*--------------------------------------------------------*/
 body{
 	margin : 0;
 	background :  #9a25e6;
 }
 
+/* --------------------------------------------------------*/
+/* tout ceci concerne le header de la page */
 header img{
 	width : 150px;
 
@@ -44,3 +50,69 @@ header hgroup{
 	border-radius : 8px;
 	height: 150px;
 }
+
+/* -------------------------------------------------------------------------- */
+
+/* Tout ceci concerne le navbar */
+
+#header_nav{
+	position : relative;
+}
+#header_nav nav{
+	height : 70px;
+	float:right;
+	position: absolute;
+	bottom : 0;
+	right : 0;
+}
+nav > ul > li{
+	display: inline-block;
+	text-align : center;
+	width : 150px;
+	margin-right : 80px;
+	
+}
+
+nav li a {
+	display : block;
+	text-decoration: none;
+	font-family : "BebasNeue regular";
+	color : white;
+	font-size : 30px;
+	height: 47px;
+	padding-top : 10px;
+}
+nav > ul > li > a:hover{
+	background-image : linear-gradient(to bottom, white, white, white, #9a25e6);
+	color : #9a25e6;
+	border-top-left-radius : 20px;
+	border-top-right-radius : 20px;
+	color : #646fc1;
+	font-family : "bebasNeue";
+}
+nav > ul > li > ul{
+	display: none;
+}
+nav > ul > li:hover > ul{
+	display : block;
+	background-image: linear-gradient(to bottom, #9a25e6, white, white, white,white, white, white, white, white, white, white, white,white,white,white, white);
+	padding-top : 10px;
+	position : absolute;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	padding-right : 6px;
+}
+nav > ul > li > ul > li a{
+	color : #9a25e6;
+}
+nav > ul > li > ul > li a:hover{
+	color : #646fc1;
+	font-family : "BebasNeue";
+}
+nav > ul > li:hover > ul > li > ul{
+	display : none;
+}
+nav > ul > li> ul > li{
+	list-style-type:  none;
+}
+
