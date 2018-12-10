@@ -30,9 +30,17 @@ header hgroup{
 }
 header{
 	width : 350px;
-	display:flex;
+	height : 100%;
+	float:left;
+}
+header a{
+	float:left;
+}
+header hgroup{
+	float:left;
 }
 #header_nav{
 	background-image : linear-gradient(to bottom right, white, #9a25e6);
 	border-radius : 8px;
+	height: 150px;
 }
