@@ -101,17 +101,19 @@ nav > ul > li:hover > ul{
 	border-bottom-right-radius: 20px;
 	border-bottom-left-radius: 20px;
 	padding-right : 6px;
+	padding : 0;
+	width : 150px;
 }
+
 nav > ul > li > ul > li a{
 	color : #9a25e6;
+	display : block;
 }
 nav > ul > li > ul > li a:hover{
 	color : #646fc1;
 	font-family : "BebasNeue";
 }
-nav > ul > li:hover > ul > li > ul{
-	display : none;
-}
+
 nav > ul > li> ul > li{
 	list-style-type:  none;
 }
