@@ -1,0 +1,378 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href=""/>
+		<title> Apprendre Html </title>
+	</head>
+	<body>
+		<div id="header_nav">
+			<header>	
+				<a href="index.html"><img src="logo.png"></a><hgroup><h1>Let's Learn</h1><h4>Apprenons tous ensemble</h4></hgroup>
+			</header>
+			<nav id="menu">
+				<ul>
+					<li><a href="../index.html">Accueil</a></li>
+					<li><a href="#intoduction">Introduction</a></li>
+					<li><a href="#organiserTexte">Organiser son texte</a></li>
+					<li><a href="#structurePages">La structure d'une page html</a></li>
+					<li><a href="#balises">Les balises html</a></li>
+				</ul>
+			</nav>
+		</div>
+		
+		<main>
+		<section id="introduction">
+			<h1>Introduction</h1>
+			<p>
+				<strong>HTML (HyperText Markup Language)</strong> : il a fait son apparition dès 1991 lors du lancement du Web. Son rôle est de gérer et organiser 
+				le contenu. C'est donc en HTML que vous écrirez ce qui doit être affiché sur la page : du texte, des liens, des images… Vous direz 
+				par exemple : « Ceci est mon titre, ceci est mon menu, voici le texte principal de la page, voici une image à afficher, etc. ».
+			</p>
+			<p>
+				<h3>Les versions de HTML</h3>
+				<ul>
+					<li>
+						<strong>HTML 1 </strong>: c'est la toute première version créée par Tim Berners-Lee en 1991
+					</li>
+					<li>
+						<strong> HTML 2 </strong>: la deuxième version du HTML apparaît en 1994 et prend fin en 1996 avec l'apparition du HTML 3.0.
+						C'est cette version qui posera en fait les bases des versions suivantes du HTML. Les règles et le fonctionnement de cette version sont
+						donnés par le W3C (tandis que la première version avait été créée par un seul homme)
+						</li>
+					<li>
+						<strong> HTML 3 </strong>: apparue en 1996, cette nouvelle version du HTML rajoute de nombreuses possibilités au langage comme les
+						tableaux, les applets, les scripts, le positionnement du texte autour des images, etc
+					</li>
+					<li>
+						<strong> HTML 4 </strong>: cette version aura été utilisée un long moment durant les années 2000. Elle apparaît pour la première 
+						fois en 1998 et propose l'utilisation de frames (qui découpent une page web en plusieurs parties), des tableaux plus complexes, des 
+						améliorations sur les formulaires, etc. Mais surtout, cette version permet pour la première fois d'exploiter des feuilles de style, 
+						notre fameux CSS !
+					</li>
+					<li>
+						<strong>HTML 5 </strong>: c'est LA dernière version. De plus en plus répandue, elle fait beaucoup parler d'elle car elle apporte 
+						de nombreuses améliorations comme la possibilité d'inclure facilement des vidéos, un meilleur agencement du contenu, de nouvelles 
+						fonctionnalités pour les formulaires, etc. C'est cette version que nous allons découvrir ensemble.
+					</li>
+			</p>
+			<footer>
+				<a href="#menu">Retour</a>
+			</footer>
+		</section>
+	
+		<section id="organiserTexte">
+			<h1>Organiser son texte</h1>
+			<section>
+				<h3>Les paragraphes</h3>
+				<p>
+					La plupart du temps, lorsqu'on écrit du texte dans une page web, on le fait à l'intérieur de paragraphes. Le langage HTML propose 
+					justement la balise<pre>&lt;p&gt;</pre>pour délimiter les paragraphes.
+				</p>
+			</section>
+			<section>
+				<h3>Sauter une ligne et espace</h3>
+				<p>
+					Le saut de ligne dans le code source sera interprété comme un espace.<pre>&lt;br&gt;</pre>
+					Pour obtenir un simple retour à la ligne on utilise la balise 
+					Les paragraphes sont définis par la balise<pre>&lt;p&gt;</pre> qui permet de séparer le paragraphe du reste du texte par un espace eu haut et en bas
+					L’élément <pre>&lt;hr&gt;</pre> permet aussi un retour à la ligne, en insérant une ligne horizontale permettant de délimiter par exemple une nouvelle section.
+				</p>
+			</section>
+			<section>
+				<h3>Les titres</h3>
+				<p>
+					<pre>&lt;h1&gt;</pre>à <pre>&lt;h6&gt;</pre> :correspondent à des titres (heading en anglais) de niveaux différents. <pre>&lt;h1&gt;</pre> 
+					est un titre de premier niveau, <pre>&lt;h2&gt;</pre> un titre de deuxième niveau, et ainsi de suite jusqu’au petit dernier <pre>&lt;h6&gt;</pre>.</br>
+					Ils possèdent une forte valeur sémantique et doivent être utilisés là où un titre de document ou de section est nécessaire.
+				</p>
+				<div class="remarque">
+					<h4>Remarque :</h4>
+					<p>
+						Attention : ne confondez pas avec la balise<pre>&lt;title&gt;</pre>! La balise<pre>&lt;title&gt;</pre>affiche le titre de la page dans la barre de titre du navigateur 
+						comme nous l'avons vu. Les titres<pre>&lt;h1&gt;</pre>et compagnie, eux, servent à créer des titres qui seront affichés dans la page web.
+					</p>
+				</div>
+				<div class="boutDeCode">
+					Essayez ce bout de code :
+					<img alt="un code html" src="images/10.png" />
+				</div>
+			</section>
+			<section>
+				<h3>Mettre en valeur </h3>
+				<h4>Mettre un peu en valeur</h4>
+				<p>
+					Pour mettre un peu en valeur votre texte, vous devez utiliser la balise<pre>&lt;em&gt;  &lt;/em&gt;</pre>.
+					Son utilisation est très simple : encadrez les mots à mettre en valeur avec ces balises et c'est bon !
+				</p>
+				<h4>Mettre bien en valeur </h4>
+				<p>
+					Pour mettre un texte bien en valeur, on utilise la balise<pre>&lt;strong&gt;</pre>qui signifie <em> fort </em>, ou <em>important </em> si vous préférez. 
+					Elle s'utilise exactement de la même manière que<pre>&lt;em&gt;</pre>.
+				</p>
+			</section>	
+			<footer>
+				<a href="#menu">Retour</a>
+			</footer>
+		</section>
+		
+		<section id="structurePages">
+			<h1>La structure d'une page html</h1>
+			<section>
+				<p>
+					Nous approchons de plus en plus du but. Si nos pages web ne ressemblent pas encore tout à fait aux sites web que nous connaissons, 
+					c'est qu'il nous manque les connaissances nécessaires pour faire la mise en page.</br>
+					En général, une page web est constituée d'un en-tête (tout en haut), de menus de navigation (en haut ou sur les côtés), de différentes 
+					sections au centre… et d'un pied de page (tout en bas).</br>
+					Dans ce chapitre, nous allons nous intéresser aux nouvelles balises HTML dédiées à <em>la structuration du site</em>. Ces balises ont été 
+					introduites par HTML5 (elles n'existaient pas avant) et vont nous permettre de dire : « Ceci est mon en-tête », 
+					« Ceci est mon menu de navigation », etc.
+				</p>
+				<p>
+					Je vais vous présenter ici les nouvelles balises introduites par HTML5 pour structurer nos pages. Vous allez voir, cela ne va pas 
+					beaucoup changer l'apparence de notre site pour le moment, mais il sera bien construit et prêt à être mis en forme ensuite !
+				</p>
+			</section>	
+			
+			<section>
+				<h3>L'en-tête</h3>
+				La plupart des sites web possèdent en général un en-tête, appelé header en anglais. On y trouve le plus souvent un logo, une bannière, le slogan de votre site…
+				Vous devrez placer ces informations à l'intérieur de la balise<em><pre>&lt;header&gt;</pre></em>.
+				<div class="remarque">
+					<h4>Remarque :</h4>
+					<p>
+						Il peut y avoir plusieurs en-têtes dans votre page. Si celle-ci est découpée en plusieurs 
+						sections, chaque section peut en effet avoir son propre<pre>&lt;header&gt;</pre>.
+					</p>
+				</div>
+			</section>
+			
+			<section>
+				<h3>le pied de page<h3>
+				<p>
+					La balise <em><pre>&lt;footer&gt;</pre></em> a l'inverse de l'en-tête, le pied de page se trouve en général tout en bas du document. On y trouve des informations comme 
+					des liens de contact, le nom de l'auteur, les mentions légales, etc.
+				</p>	
+			</section>
+			
+			<section>
+				<h3>Principaux liens de navigation</h3>
+				<p>
+					La balise<em><pre>&lt;nav&gt;</pre></em>doit regrouper tous les principaux liens de navigation du site. Vous y placerez par exemple le menu principal de votre site.
+					Généralement, le menu est réalisé sous forme de liste à puces à l'intérieur de la balise<pre>&lt;nav&gt;</pre>.
+				</p>
+				<div class="boutDeCode">
+					Voila un exemple d'un menu
+					<img alt="un code html" src="images/11.png"/>
+				</div>
+			</section>
+			
+			<section>
+				<h3>Une section de page</h3>
+				<p>
+					Les contenus regroupés entre <em><pre>&lt;section&gt; et &lt;section&gt;</pre></em> sont liés entre eux.
+					Les éléments de sections délimitent les zones du document possédant une valeur sémantique particulière.Chaque section possède 
+					un rôle précis, et peut être utilisée une à plusieurs fois dans le document.</br>
+					Les avantages : </br>
+					le code source est plus clair, les différentes parties composant un document sont clairement identifiées. 
+					En accroissant la valeur sémantique, on augmente aussi les possibilités d’analyse du contenu et de référencement.
+				</p>
+			</section>
+			
+			<section>
+				<h3>Informations complémentaires</h3>
+				<p>
+					La balise<em><pre>&lt;aside&gt;</pre></em>est conçue pour contenir des informations complémentaires au document que l'on visualise. Ces informations sont 
+					généralement placées sur le côté (bien que ce ne soit pas une obligation).</br>
+					Il peut y avoir plusieurs blocs<pre>&lt;aside&gt;</pre>dans la page.
+				</p>
+			</section>
+			<section>
+				<h3>Un article indépendant</h3>
+				<p>
+					La balise<em><pre>&lt;article&gt;</pre></em>sert à englober une portion généralement autonome de la page. C'est une partie de la page qui pourrait ainsi 
+					être reprise sur un autre site. C'est le cas par exemple des actualités (articles de journaux ou de blogs).
+				</p>
+			</section>
+			
+		
+			<section id="resume">
+				<h3>Résumé</h3>
+				<div id="schema">
+					<p> Voila un petit schéma (figure suivante) pour vous aider à retenir leur rôle !</p>
+					<img alt="schema" title ="Sections de la page identifiées par les balises" src="images/12.png"/>
+				</div>
+			</section>
+		</section>
+		<footer>
+				<a href="#menu">Retour</a>
+		</footer>
+		<section id="balises">
+			<h1>Les balises html</h1>
+			
+				<table border="1">
+					<caption>Balises de premier niveau</caption>
+					<thead>
+						<tr>
+							<th>Balise</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>html</td>
+							<td>Balise principale</td>
+						</tr>
+						<tr>
+							<td>header</td>
+							<td>En-tête de la page</td>
+						</tr>
+						<tr>
+							<td>body</td>
+							<td>Corps de la page</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table border="1">
+					<caption>Balises d'en-tete</caption>
+					<thead>
+						<tr>
+							<th>Balise</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>link</td>
+							<td>Liaison avec une feuille de style</td>
+						</tr>
+						<tr>
+							<td>meta</td>
+							<td>Métadonnées de la page web (charset, mots-clés, etc.)</td>
+						</tr>
+						<tr>
+							<td>title</td>
+							<td>Titre de la page</td>
+						</tr>
+						<tr>
+							<td>script</td>
+							<td>Code JavaScript</td>
+						</tr>
+						<tr>
+							<td>style</td>
+							<td>Code CSS</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table border="1">
+					<caption>Balises de liste</caption>
+					<thead>
+						<tr>
+							<th>Balise</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>ul</td>
+							<td>Liste à puces, non numérotée</td>
+						</tr>
+						<tr>
+							<td>ol</td>
+							<td>Liste numérotée</td>
+						</tr>
+						<tr>
+							<td>li</td>
+							<td>Élément de la liste à puces</td>
+						</tr>
+						<tr>
+							<td>dl</td>
+							<td>Liste de définitions</td>
+						</tr>
+						<tr>
+							<td>dt</td>
+							<td>Terme à définir</td>
+						</tr>
+						<tr>
+							<td>dd</td>
+							<td>Définition du terme</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<table border="1">
+					<caption>Balise de tableau</caption>
+					<thead>
+						<tr>
+							<th>Balise</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>table</td>
+							<td>Tableau</td>
+						</tr>
+						<tr>
+							<td>caption</td>
+							<td>Titre du tableau</td>
+						</tr>
+						<tr>
+							<td>tr</td>
+							<td>Ligne de tableau</td>
+						</tr>
+						<tr>
+							<td>th</td>
+							<td>Cellule d'en-tête</td>
+						</tr>
+						<tr>
+							<td>td</td>
+							<td>Cellule</td>
+						</tr>
+						<tr>
+							<td>thead</td>
+							<td>Section de l'en-tête du tableau</td>
+						</tr>
+						<tr>
+							<td>tbody</td>
+							<td>Section du corps du tableau</td>
+						</tr>
+						<tr>
+							<td>tfoot</td>
+							<td>Section du pied du tableau</td>
+						</tr>
+					</tbody>
+				</table>
+			<footer>
+				<a href="#menu">Retour</a>
+			</footer>
+		</section>
+		
+		
+		</main>
+		
+		<footer>
+			<div>
+				<h4>Avec le soutien de l'USTHB</h4>
+		
+				<img src="../usthb.png"/>
+			</div>
+			<div id="suivezNous">
+				<h4>Suivez-nous !</h4>
+				<img alt="Facebook" src="../fb.png"/>
+				<img alt="RSS" src="../rss.png"/>
+				<img alt="Twitter" src="../twitter.png"/>
+				<img alt="Vimeo" src="../vimeo.png"/>
+				<img alt="Flickr" src="../flickr.png"/>
+			</div>	
+			<div id="contactezNous">
+				<h4>Contactez-nous</h4>
+				<address>
+					Email : auteur@gmail.com
+				</address>
+			</div>
+			Let's Learn | 2018 © Tous droits résérvés
+		</footer>
+	</body>
+</html>	

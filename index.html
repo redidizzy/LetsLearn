@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Let's Learn</title>
+	<meta charset="utf-8"/>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -9,15 +10,141 @@
 		<header>	
 			<a href="index.html"><img src="logo.png"></a><hgroup><h1>Let's Learn</h1><h4>Apprenons tous ensemble</h4></hgroup>
 		</header>
-		<nav>
-			
+		<nav id="menu">
+			<ul> 
+				<li><a href="#">Accueil</a></li>
+				<li>
+					<a href="#cours">Nos cours</a>
+					<ul> 
+						<li>
+							<a href="cours/coursHtml.html">Html</a>
+							<ul>
+								<li><a href="cours/coursHtml.html#organiserTexte#">Organiser son texte</a></li>
+								<li><a href="cours/coursHtml.html#structurePages">La structure</a></li>
+								<li><a href="cours/coursHtml.html#balises">Les balises html</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="cours/coursCss.html">CSS</a>
+							<ul>
+								<li><a href="cours/coursCss.html">Mettre en place le css</a></li>
+								<li><a href="cours/coursCss.html#couleurFont">La couleur et le font</a></li>
+								<li><a href="cours/coursCss.html#bordureOmbre">Les bordures et les ombres</a></li>
+								<li><a href="cours/coursCss.html#proprietesCss">Les propriétés css</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="cours/coursJavascript.html">JavaScript</a>
+							<ul>
+								<li><a href="cours/coursJavascript.html#">Les variables et les conditions</a></li>
+								<li><a href="cours/coursJavascript.html#">Les chaines de caractères</a></li>
+								<li><a href="cours/coursJavascript.html#">Les objet</a></li>
+								<li><a href="cours/coursJavascript.html#">Récapitulatif</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="cours/coursPhp.html">PHP</a>
+							<ul>
+								<li><a href="cours/coursPhp.html#">Les variables</a></li>
+								<li><a href="cours/coursPhp.html#">Les conditions et les boucle</a></li>
+								<li><a href="cours/coursPhp.html#">Les tableaux</a></li>
+								<li><a href="cours/coursPhp.html#">Les fonctions</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
 		</nav>
 	</div>
-	<main>	
-
+	<main id="main">
+		<section>
+			<article>
+			<!--<img src="img/about-plan.jpg"/> l'image sera en arriere plan -->
+			<div>
+				<h2>Vous apprehendez d'apprendre la programmation web ?</h2>
+				<p>
+					Let's Learn est une plateforme d'education en ligne, rend l'éducation accessible a tous.</br>
+					Let's Learn vous permet d’atteindre votre objectifs plus facilement.
+				</p>
+				<p>
+					Que vous soyez amateur ou debutant ou professionnel en programmation Let's Learn est pour vous, nous allons vous accompagner pas a pas
+					jusqu'a la fin.
+				</p>
+			</div>	
+			</article>
+			
+			<article>
+				<div>
+					<!-- <img src="img/about-mission.jpg"/> l'image sera en arriere plan -->
+					<h2>Desirez-vous creer votre premier site web ?</h2>
+					<p>
+						<a href="coursHtml/coursHtml.html">Ne perdez pas de temps commencez maintenant !</a>
+					</p>
+				</div>	
+			</article>
+		</section>
+		
+		<section id="cours">
+			<h2>Nos cours </h2>
+			<a href="cours/coursHtml.html">
+				<div>
+					<h4>Structrez vos page en HTML</h4>
+					<img src="html.jpg"/>
+				</div>
+			</a>
+			<a href="cours/coursCss.html">
+				<div>
+					<h4>La mise en page de votre document html en CSS</h4>
+					<img src="css.jpg"/>
+				</div>
+			</a>
+			<a href="cours/coursJavascript.html">
+				<div>
+					<h4>Rendez vos pages interactives avec JAVASCRIPT</h4>
+					<img src="js.jpg"/>
+				<div>
+			</a>
+			<a href="cours/coursPhp.html">
+				<div>
+					<h4>Rendez vos pages dynamiques avec PHP</h4>
+					<img src="php.png"/>
+				<div>
+			</a>
+		</section>
+		<aside>
+			<h3> A propos de l'auteur</h3>
+			<div id="imgAside">
+			<img alt="photo ordinateur" src="img/3.jpg" style="width:200px;hight:200px;"/>
+			</div>
+			<p>
+				Nous sommes deux jeunes etudiants passionnés de la programmation comme vous.
+			</p>
+			<p>
+				Notre but est de partager nos connaissance dans le domaine du web avec vous !
+			</p>
+		</aside>
 	</main>
 	<footer>
-		
+		<div>
+			<h4>Avec le soutien de l'USTHB</h4>
+			
+			<img src="usthb.png"/>
+		</div>
+		<div id="suivezNous">
+			<h4>Suivez-nous !</h4>
+			<img alt="Facebook" src="fb.png"/>
+			<img alt="RSS" src="rss.png"/>
+			<img alt="Twitter" src="twitter.png"/>
+			<img alt="Vimeo" src="vimeo.png"/>
+			<img alt="Flickr" src="flickr.png"/>
+		</div>	
+		<div id="contactezNous">
+			<h4>Contactez-nous</h4>
+			<address>
+				Email : auteur@gmail.com
+			</address>
+		</div>
+		Let's Learn | 2018 © Tous droits résérvés
 	</footer>
 </body>
 </html>
