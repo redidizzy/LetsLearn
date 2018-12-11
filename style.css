@@ -119,8 +119,17 @@ nav > ul > li> ul > li{
 	list-style-type:  none;
 }
 
+main{
+	width : 80%;
+	margin : auto;
+	margin-bottom : 20px;
+	overflow:hidden;
+}
+
 #LL{
 	height: 400px;
+	margin-top : 50px;
+	margin-bottom : 30px;
 }
 #LLdefinition, #LLStart{
 	border-radius : 8px;
@@ -181,13 +190,151 @@ nav > ul > li> ul > li{
 	border-top-left-radius : 8px;
 	border-top-right-radius: 8px;
 }
-#LL{
-	width : 80%;
-	margin : auto;
-	margin-top : 50px;
-}
+
 #cours{
 	clear:both;
+	
+	background-color : white;
+	border-radius : 10px;
+	padding : 10px;
+	margin-bottom : 20px;
+}
+#cours > h2{
+	text-align : center;
+	font-family: "BebasNeue";
+	font-size : 30px;
+	color : #646fc1;
+	border-bottom: 3px #646fc1 solid;
+	padding-bottom : 10px;
+	margin-top : 5px;
+}
+#cours figure{
+	width: 40%;
+	display:inline-block;
+	text-align : center;
+	margin-bottom : 30px;
+	margin-right : 30px;
+}
+#cours img, #cours figcaption{
+	width : 200px;
+	margin:auto;
+}
+#cours img{
+	height : 200px;
+	box-shadow : 2px 0px 10px;
+}
+#cours a {
+	text-decoration : none;
+}
+#cours a:visited{
+	color : blue;
+}
+#cours a:hover{
+	color : olive;
+}
+#cours figcaption{
+	font-family:"BebasNeue regular";
+	display: block;
+	background-color : lightgray;
+	width : 180px;
+	padding : 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	position: relative;
+	top : -10px;
+	box-shadow : 2px 2px 10px;
+}
+#cours > section{
+	width : 85%;
+	margin : auto;
+}
+main aside {
+	border-radius : 10px;
+	height : 300px;
 }
 
+main aside#about{
+	width : 200px;
+	height : 300px;
+	background : url('img/3.jpg') no-repeat;
+	background-size : 200px 300px;
+	float : right;
+}
+main aside h3{
+	margin-top : 0px;
+	background : lightgray;
+	padding : 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	font-family : "BebasNeue";
+	color :#646fc1;
+}
+main aside#about p{
+	background-color : rgba(255, 255, 255, 0.5);
+	margin : 20px;
+	padding : 5px;
+	text-align : center;
+	color : purple;
+}
+footer{
+	clear : both;
+}
+main aside#github{
+	width : 80%;
+	float : left;
+	background : white;
+}
+main aside#github p{
+	text-align: center;
+	margin : 20px;
+	font-family : "BebasNeue regular";
+}
+main aside#github p address{
+	display : inline;
+}
+main aside#github a[href^="https"]{
+	display : block;
+	width : 20%;
+	padding : 10px;
+	margin : auto;
+	text-align : center;
+	text-decoration: none;
+	color : white;
+	background-image : linear-gradient(to top, #9a25e6, #646fc1);
+	border-radius : 8px;
+}
+main aside#github a[href^="https"]:hover{
+	color : cyan;
+	box-shadow : 2px 1px 50px;
+}
 
+/*--------------------------------------------------------------
+Tout ce qui concerne le footer */
+footer{
+	width : 70%;
+	margin : auto;
+	background : linear-gradient(to bottom, #9a25e6, rgba(255,255,255,0.3));
+	position : relative;
+}
+footer > *{
+	display : inline-block;
+	width : 25%;
+	margin-right: 50px;
+	padding-right : 20px;
+	text-align : center;
+	padding-bottom : 15px;
+	vertical-align: text-top;
+}
+footer img[src="usthb.png"]{
+	width : 100px;
+	text-align : center;
+	border-radius : 8px;
+}
+footer #copyright{
+	display: block;
+	text-align : center;
+	width : 100%;
+}
+h4 + div, h4 + address {
+	margin-top : 45px;
+}
