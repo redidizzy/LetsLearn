@@ -6,6 +6,10 @@
 	font-family : "bebasNeue regular";
 	src:url("fonts/BebasNeue Regular.otf") format('truetype');
 }
+@font-face{
+	font-family : "bebasNeue book";
+	src:url("fonts/BebasNeue Book.otf") format('truetype');
+}
 /*--------------------------------------------------------*/
 body{
 	margin : 0;
@@ -14,50 +18,50 @@ body{
 
 /* --------------------------------------------------------*/
 /* tout ceci concerne le header de la page */
-header img{
+#header_nav header img{
 	width : 150px;
 
 }
 
-header h4{
+#header_nav header h4{
 	margin-left : 20px;
 	margin-top: 0px;
 	color : #646fc1;
 }
-header h1{
+#header_nav header h1{
 	margin-bottom : 0px;
 	color : #9a25e6;
 }
-header hgroup{
+#header_nav header hgroup{
 	font-family: "BebasNeue";
 	margin-top : 0px;
 	position : relative;
 	left: -20px;
 }
-header{
+#header_nav header{
 	width : 350px;
 	height : 100%;
 	float:left;
 }
-header a{
+#header_nav header a{
 	float:left;
 }
-header hgroup{
+#header_nav header hgroup{
 	float:left;
 }
 #header_nav{
 	background-image : linear-gradient(to bottom right, white, #9a25e6);
 	border-radius : 8px;
 	height: 150px;
+	position : relative;
+	margin-bottom : 20px;
 }
 
 /* -------------------------------------------------------------------------- */
 
 /* Tout ceci concerne le navbar */
 
-#header_nav{
-	position : relative;
-}
+
 #header_nav nav{
 	height : 70px;
 	float:right;
@@ -104,6 +108,7 @@ nav > ul > li:hover > ul{
 	padding : 0;
 	width : 150px;
 	z-index : 1;
+	box-shadow: 2px 2px 10px;
 }
 
 nav > ul > li > ul > li a{
@@ -276,9 +281,7 @@ main aside#about p{
 	text-align : center;
 	color : purple;
 }
-footer{
-	clear : both;
-}
+
 main aside#github{
 	width : 80%;
 	float : left;
@@ -310,13 +313,14 @@ main aside#github a[href^="https"]:hover{
 
 /*--------------------------------------------------------------
 Tout ce qui concerne le footer */
-footer{
+body > footer{
 	width : 70%;
 	margin : auto;
 	background : linear-gradient(to bottom, #9a25e6, rgba(255,255,255,0.3));
 	position : relative;
+	clear : both;
 }
-footer > *{
+body > footer > *{
 	display : inline-block;
 	width : 25%;
 	margin-right: 50px;
@@ -325,12 +329,12 @@ footer > *{
 	padding-bottom : 15px;
 	vertical-align: text-top;
 }
-footer img[src="usthb.png"]{
+body > footer img[src$="usthb.png"]{
 	width : 100px;
 	text-align : center;
 	border-radius : 8px;
 }
-footer #copyright{
+body > footer #copyright{
 	display: block;
 	text-align : center;
 	width : 100%;
@@ -338,3 +342,99 @@ footer #copyright{
 h4 + div, h4 + address {
 	margin-top : 45px;
 }
+nav li a[href="#"] {
+	box-shadow : inset 5px 5px 15px rgba(0,0,0,0.5);
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px
+}
+
+/* ----------------------------------------------------------------
+Tout ce qui concerne les cours */
+
+main#cours{
+	background : white;
+	box-shadow: 4px 4px 20px;
+}
+main#cours > section{
+	border-bottom : 2px solid blue;
+	padding-bottom : 20px;
+}
+main#cours > section > header h1{
+	text-align : center;
+	color : #646fc1;
+	font-family : "BebasNeue";
+	font-size : 40px;
+}
+main#cours h2{
+	color : #646fc1;
+	font-family : "BebasNeue";
+	font-size : 25px;
+	text-decoration : underline;
+}
+main#cours h3, main#cours h4{
+	color : #9a25e6;
+	font-family : "BebasNeue";
+}
+main#cours p{
+	text-align : justify;
+	text-indent : 20px;
+}
+main#cours img{
+	width : 600px;
+	height : 250px;
+	margin :auto;
+	margin-top : 20px;
+	margin-bottom : 20px;
+	display : block;
+
+}
+main#cours footer{
+	float : right;
+}
+main#cours table thead{
+	background-color : purple;
+	color : white;
+	font-family : "BebasNeue regular";
+}
+main#cours table thead th{
+	padding : 5px;
+}
+main#cours table thead{
+	background-color : purple;
+	color : white;
+}
+main#cours table tbody{
+	 background : lightgray;
+}
+main#cours table tbody td{
+	text-align : center;
+	padding : 5px;
+}
+main#cours table tbody td:hover{
+	background : gray;
+	cursor : crosshair;
+}
+main#cours table {
+	box-shadow: 5px 5px 15px;
+	caption-side : bottom;
+	margin : auto;
+	margin-bottom : 30px;
+	width : 500px;
+}
+main#cours table caption{
+	font-family : "BebasNeue book";
+	margin-top : 5px;
+	/*box-shadow : 5px 5px 15px;*/
+	padding-top : 5px;
+}
+main#cours table caption:hover{
+	font-family : "BebasNeue";
+	cursor : pointer;
+}
+main#cours .remarque {
+	box-shadow : 2px 2px 10px;
+	border-radius : 8px;
+	padding : 2px;
+	margin : 10px;
+}
+

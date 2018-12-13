@@ -10,7 +10,7 @@
 			<header>	
 				<a href="index.html"><img src="../logo.png"></a><hgroup><h1>Let's Learn</h1><h4>Apprenons tous ensemble</h4></hgroup>
 			</header>
-			<nav id="menu">
+			<!-- <nav id="menu">
 				<ul>
 					<li><a href="../index.html">Accueil</a></li>
 					<li><a href="#introduction">Introduction</a></li>
@@ -19,9 +19,31 @@
 					<li><a href="#bordureOmbre">Les bordures et les ombres</a></li>
 					<li><a href="#proprietesCss">Propriétés Css</a></li>
 				</ul>
-			</nav>
+			</nav> -->
+			<nav id="menu">
+			<ul> 
+				<li><a href="../index.html">Accueil</a></li>
+				<li>
+					<a href="#cours">Nos cours</a>
+					<ul> 
+						<li>
+							<a href="coursHtml.html">Html</a>
+						</li>
+						<li>
+							<a href="#">CSS</a>
+						</li>
+						<li>
+							<a href="coursJavascript.html">JavaScript</a>
+						</li>
+						<li>
+							<a href="coursPhp.html">PHP</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
 		</div>
-		<main>	
+		<main id="cours">	
 			<section id="introduction">
 				<header>
 					<h1>Introduction</h1>
@@ -47,7 +69,7 @@
 					<p>
 						Il faut savoir qu'aux débuts du Web, CSS n'existait pas. En fait, il n'y avait initialement que le langage HTML.
 						Le HTML est né en 1991 et CSS en 1996. Alors, vous vous dites sûrement : comment faisait-on la mise en forme de 1991 à 1996 ? Eh bien, 
-						uniquement en HTML ! Il y avait en effet des balises HTML dédiées à la mise en forme.<pre>&lt;font color="#aab1c3"&gt;</pre>, par exemple, permettait de définir 
+						uniquement en HTML ! Il y avait en effet des balises HTML dédiées à la mise en forme. &lt;font color="#aab1c3"&gt; , par exemple, permettait de définir 
 						la couleur du texte.
 						Cependant, les pages HTML commençaient à devenir assez complexes. Il y avait de plus en plus de balises et c'était un joyeux mélange entre le 
 						fond et la forme, qui rendait la mise à jour des pages web de plus en plus complexe. C'est pour cela que l'on a créé le langage CSS.
@@ -85,44 +107,52 @@
 				<h2>Ou est ce que on ecrit en css ?</h2>
 				<p>
 					Vous avez le choix car on peut écrire du code en langage CSS à trois endroits différents :
+				</p>
 					<ul>
-						<li>dans un fichier.css(méthode la plus recommandée) ;</li>
-						<li>dans l'en-tête<pre>&lt;head&gt;</pre>du fichier HTML ;<li>
-						<li>directement dans les balises du fichier HTML via un attribut style(méthode la moins recommandée).</li>
+						<li>dans un fichier.css(méthode la plus recommandée) ; </li>
+						<li>dans l'en-tête &lt;head&gt; du fichier HTML ; </li>
+						<li>directement dans les balises du fichier HTML via un attribut style(méthode la moins recommandée). </li>
 					</ul>
+				<p>
 					Je vais vous présenter ces trois méthodes mais sachez d'ores et déjà que la première… est la meilleure.
 				</p>
-				<h3>Dans un fichier.css</h3>
-				<p>
-					Comme je viens de vous le dire, on écrit le plus souvent le code CSS dans un fichier spécial ayant l'extension.css(contrairement aux fichiers 
-					HTML qui ont l'extension.html). C'est la méthode la plus pratique et la plus souple. Cela nous évite de tout mélanger dans un même fichier. 
-					J'utiliserai cette technique dans toute la suite de ce cours.
-					Commençons à pratiquer dès maintenant ! Nous allons partir du fichier HTML suivant :
-					<img src="images/1.png"/>
-					Vous noterez le contenu de la ligne 5,<pre>&lt;link rel="stylesheet" href="style.css"/&gt;</pre>: c'est elle qui indique que ce fichier HTML est 
-					associé à un fichier appeléstyle.csset chargé de la mise en forme.
-					Enregistrez ce fichier sous le nom que vous voulez (par exemple page.html). Pour le moment, rien d'extraordinaire à part la nouvelle balise que 
-					nous avons ajoutée.
-					Maintenant, créez un nouveau fichier vide dans votre éditeur de texte (par exemple Sublime Text) et copiez-y ce bout de code CSS :
-					<img rel="images/2.png"/>
-					Enregistrez le fichier en lui donnant un nom qui se termine par<strong>.css</strong>, commestyle.css. Placez ce fichier.cssdans le même dossier que votre fichier<strong>.html<strong>.</br>
-					Ouvrez maintenant votre fichierpage.htmldans votre navigateur pour le tester, comme vous le faites d'habitude. Regardez, c'est magique : 
-					vos paragraphes sont écrits en bleu.
-				
-				</p>
-				<h3>Dans l'en-tête<pre>&lt;head&gt;</pre>du fichier HTML</h3>
-				<p>
-					Il existe une autre méthode pour utiliser du CSS dans ses fichiers HTML : cela consiste à insérer le code CSS directement dans une 
-					balise<pre>&lt;style&gt;</pre>à l'intérieur de l'en-tête<pre>&lt;head&gt;</pre>.
-					Voici comment on peut obtenir exactement le même résultat avec un seul fichier.html qui contient le code CSS (lignes 5 à 10) :
-					<img src="images/4.png"/>
-				</p>
-				<h3>Directement dans les balises du fichier HTML via un attribut style</h3>
-				<p>
-					Dernière méthode, à manipuler avec précaution : vous pouvez ajouter un attribut style à n'importe quelle balise. Vous insérerez votre 
-					code CSS directement dans cet attribut.
+				<section>
+					<h3>Dans un fichier.css</h3>
+					<p>
+						Comme je viens de vous le dire, on écrit le plus souvent le code CSS dans un fichier spécial ayant l'extension.css(contrairement aux fichiers 
+						HTML qui ont l'extension.html). C'est la méthode la plus pratique et la plus souple. Cela nous évite de tout mélanger dans un même fichier. 
+						J'utiliserai cette technique dans toute la suite de ce cours.
+						Commençons à pratiquer dès maintenant ! Nous allons partir du fichier HTML suivant :
+						<img src="images/1.png"/>
+						Vous noterez le contenu de la ligne 5, &lt;link rel="stylesheet" href="style.css"/&gt; : c'est elle qui indique que ce fichier HTML est 
+						associé à un fichier appeléstyle.csset chargé de la mise en forme.
+						Enregistrez ce fichier sous le nom que vous voulez (par exemple page.html). Pour le moment, rien d'extraordinaire à part la nouvelle balise que 
+						nous avons ajoutée.
+						Maintenant, créez un nouveau fichier vide dans votre éditeur de texte (par exemple Sublime Text) et copiez-y ce bout de code CSS :
+						<img rel="images/2.png"/>
+						Enregistrez le fichier en lui donnant un nom qui se termine par<strong>.css</strong>, commestyle.css. Placez ce fichier.cssdans le même dossier que votre fichier<strong>.html</strong>.</br>
+						Ouvrez maintenant votre fichierpage.htmldans votre navigateur pour le tester, comme vous le faites d'habitude. Regardez, c'est magique : 
+						vos paragraphes sont écrits en bleu.
 					
-				</p>
+					</p>
+				</section>
+				<section>
+					<h3>Dans l'en-tête &lt;head&gt; du fichier HTML</h3>
+					<p>
+						Il existe une autre méthode pour utiliser du CSS dans ses fichiers HTML : cela consiste à insérer le code CSS directement dans une 
+						balise &lt;style&gt; à l'intérieur de l'en-tête &lt;head&gt; .
+						Voici comment on peut obtenir exactement le même résultat avec un seul fichier.html qui contient le code CSS (lignes 5 à 10) :
+						<img src="images/4.png"/>
+					</p>
+				</section>
+				<section>
+					<h3>Directement dans les balises du fichier HTML via un attribut style</h3>
+					<p>
+						Dernière méthode, à manipuler avec précaution : vous pouvez ajouter un attribut style à n'importe quelle balise. Vous insérerez votre 
+						code CSS directement dans cet attribut.
+						
+					</p>
+				</section>
 				<footer>
 					<a href="#menu">Retour</a>
 				</footer>
@@ -145,7 +175,7 @@
 						Pour indiquer une couleur de fond, on utilise la propriété CSS background-color. Elle s'utilise de la même manière que la 
 						propriétécolor, c'est-à-dire que vous pouvez taper le nom d'une couleur, l'écrire en notation hexadécimale ou encore utiliser la 
 						méthode RGB.</br>
-						Pour indiquer la couleur de fond de la page web, il faut travailler sur la balise<pre style=" display:inline; color:red;">&lt;body&gt;</pre>. Eh oui,<pre>&lt;body&gt;</pre>correspond 
+						Pour indiquer la couleur de fond de la page web, il faut travailler sur la balise &lt;body&gt; . Eh oui, &lt;body&gt; correspond 
 						à l'ensemble de la page web, c'est donc en modifiant sa couleur de fond que l'on changera la couleur d'arrière-plan de la page.
 						Regardez très attentivement ce code CSS :
 						<img src="images/6.png" alt="code css"/>
@@ -156,14 +186,14 @@
 					<h4>Le css et l'heritage</h4>
 					<p>
 						En CSS, si vous appliquez un style à une balise, toutes les balises qui se trouvent à l'intérieur prendront le même style.
-						C'est en fait simple à comprendre et intuitif. La balise<pre>&lt;body&gt;</pre>, vous le savez, contient entre autres les balises de paragraphe
-						<pre>&lt;p&gt;</pre>et de titre<pre>&lt;h1&gt;</pre>.</br>
-						Si j'applique une couleur de fond noire et une couleur de texte blanche à la balise<pre>&lt;body&gt;</pre>, tous mes 
+						C'est en fait simple à comprendre et intuitif. La balise &lt;body&gt; , vous le savez, contient entre autres les balises de paragraphe
+						 &lt;p&gt; et de titre &lt;h1&gt; .</br>
+						Si j'applique une couleur de fond noire et une couleur de texte blanche à la balise &lt;body&gt; , tous mes 
 						titres et paragraphes auront eux aussi un arrière-plan de couleur noire et un texte de couleur blanche… C'est ce phénomène qu'on 
 						appelle l'héritage : on dit que les balises qui se trouvent à l'intérieur d'une autre balise « héritent » de ses propriétés.
 					</p>
 				</section>
-						
+					
 				<section>
 					<h3>Image de fond</h3>
 					<p>
@@ -184,9 +214,9 @@
 						L'adresse indiquant où se trouve l'image de fond peut être écrite en absolu (http://…) ou en relatif (fond.png).
 					</p>
 				</section>
-					<footer>
-						<a href="#menu">Retour</a>
-					</footer>
+				<footer>
+					<a href="#menu">Retour</a>
+				</footer>
 				
 			</section>
 				
@@ -198,12 +228,11 @@
 					Les ombres font partie des nouveautés récentes proposées par CSS3. Aujourd'hui, il suffit d'une seule ligne de CSS pour ajouter 
 					des ombres dans une page !
 					Nous allons ici découvrir deux types d'ombres : 
+				</p>
 					<ul>
 						<li>les ombres des boîtes</li>
 						<li>les ombres du texte</li>
-					</ul>	
-				</p>
-				
+					</ul>		
 				<section>
 					<h3>"box-shadow" les ombres des boîtes</h3>
 					<p>
@@ -232,9 +261,10 @@
 				<!-- chapitre 4 -->
 				
 			<section id="proprietesCss">
-				
-				<h1>Propriétés Css</h1>
-				<table border="1">
+				<header>
+					<h1>Propriétés Css</h1>
+				</header>
+				<table>
 					<caption>Propriétés de mise en forme du texte</caption>
 					<thead>
 						<tr>
@@ -333,7 +363,7 @@
 					</tbody>
 				</table>
 
-				<table border="1">
+				<table >
 					<caption>Propriétés de couleur et de fond</caption>
 					<thead>
 						<tr>
@@ -388,7 +418,7 @@
 				</table>
 					
 					
-				<table border="1">
+				<table >
 					<caption>Propriétés des boîtes</caption>
 					<thead>
 						<tr>
@@ -472,7 +502,7 @@
 					</tbody>
 				</table>
 			
-				<table border="1">
+				<table>
 					<caption>Propriétés de positionnement et d'affichage</caption>
 					<thead>
 						<tr>
@@ -547,31 +577,35 @@
 				<footer>
 					<a href="#menu">Retour</a>
 				</footer>
-			
 			</section>
+
 		</main>
 		
-		<footer>
+	<footer>
+		<div>
+			<h4>Avec le soutien de l'USTHB</h4>
+			
+			<img src="../usthb.png"/>
+		</div>
+		<div id="suivezNous">
+			<h4>Suivez-nous !</h4>
 			<div>
-				<h4>Avec le soutien de l'USTHB</h4>
-				
-				<img src="../usthb.png"/>
+				<a href="facebook.com" target="_blank"><img alt="Facebook" src="../fb.png"/></a>
+				<a href="#"><img alt="RSS" src="../rss.png"/></a>
+				<a href="#"><img alt="Twitter" src="../twitter.png"/></a>
+				<a href="#"><img alt="Vimeo" src="../vimeo.png"/></a>
+				<a href="#"><img alt="Flickr" src="../flickr.png"/></a>
 			</div>
-			<div id="suivezNous">
-				<h4>Suivez-nous !</h4>
-				<img alt="Facebook" src="../fb.png"/>
-				<img alt="RSS" src="../rss.png"/>
-				<img alt="Twitter" src="../twitter.png"/>
-				<img alt="Vimeo" src="../vimeo.png"/>
-				<img alt="Flickr" src="../flickr.png"/>
-			</div>	
-			<div id="contactezNous">
-				<h4>Contactez-nous</h4>
-				<address>
-					Email : auteur@gmail.com
-				</address>
-			</div>
-			Let's Learn | 2018 © Tous droits résérvés
-		</footer>
+		</div>	
+		<div id="contactezNous">
+			<h4>Contactez-nous</h4>
+			<address>
+				Email : z.rediane24@gmail.com
+			</address>
+		</div>
+		<div id="copyright">
+			Let's Learn | 2018 &copy; Tous droits résérvés
+		</div>
+	</footer>
 	</body>
 </html>	
