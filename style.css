@@ -55,6 +55,7 @@ body{
 	height: 150px;
 	position : relative;
 	margin-bottom : 20px;
+	z-index : 3;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -107,7 +108,7 @@ body{
 	padding-right : 6px;
 	padding : 0;
 	width : 150px;
-	z-index : 1;
+	z-index : 2;
 	box-shadow: 2px 2px 10px;
 }
 
@@ -343,17 +344,20 @@ h4 + div, h4 + address {
 	margin-top : 45px;
 }
 nav li a[href="#"] {
-	box-shadow : inset 5px 5px 15px rgba(0,0,0,0.5);
-	border-top-left-radius: 20px;
-	border-top-right-radius: 20px
+	box-shadow : inset 0px  3px 15px rgba(0,0,0,0.5), 
+				 inset 0px 3px 15px rgba(255,255,255,0.5); 
+	border-radius: 20px;
 }
 
 /* ----------------------------------------------------------------
 Tout ce qui concerne les cours */
-
 main#cours{
 	background : white;
 	box-shadow: 4px 4px 20px;
+	width : 70%;
+	position : relative;
+	left : 50px;
+	display : inline-block;
 }
 main#cours > section{
 	border-bottom : 2px solid blue;
@@ -437,13 +441,15 @@ main#cours .remarque {
 	border-radius : 8px;
 	padding : 5px;
 	margin : 10px;
+	background : rgba(209,179,207, 0.6);
 }
 main#cours > #introduction{
 	overflow : hidden;
 }
-main#cours > #introduction > nav{
-	float : right;
-	width : 30%;
+nav#sommaire{
+	right : 40px;
+	top : 25%;
+	width : 15%;
 	background : linear-gradient(to bottom, lightgray, white, lightgray);
 	padding : 10px;
 	padding-top : 0px;
@@ -454,8 +460,11 @@ main#cours > #introduction > nav{
 	margin-top : 30px;
 	margin-right : 20px;
 	box-shadow : 2px 2px 30px;
+	position : fixed;
+	z-index : 1;
+	height : 65vh;
 }
-main#cours > #introduction > nav h5{
+nav#sommaire h5{
 	text-align: center;
 	border-bottom : 1px solid #9a25e6;
 	padding-bottom : 5px;
@@ -464,11 +473,21 @@ main#cours > #introduction > nav h5{
 	font-size : 20px;
 	color : #9a25e6;
 }
-main#cours > #introduction > nav li{
+nav#sommaire li{
 	list-style-type : none;
 	font-family : "BebasNeue Book";
 	font-size : 20px;
-	margin-bottom : 15px;
+	margin-bottom : 40px;
+}
+
+nav#sommaire a{
+	text-decoration : none;
+}
+nav#sommaire a:visited{
+	color : blue;
+}
+nav#sommaire a:hover{
+	color : green;
 }
 
 main#cours > #introduction > article{
@@ -479,3 +498,93 @@ main#cours > #introduction > article{
 	margin-bottom : 10px;
 	list-style-type: circle;
 }
+
+#quizButton{
+	position : fixed;
+	right : 40px;
+	top : 40px;
+	width : 16%;
+	height : 30vh;
+	margin-right : 20px;
+}
+#quizButton a{
+	display : block;
+	width: 100%;
+	height : 50px;
+	text-align : center;
+	padding-top : 20px;
+	background : linear-gradient(to top, #646fc1, rgb(209,179,207));
+	border-radius : 20px;
+	text-decoration: none;
+	font-family : BebasNeue;
+	font-size : 30px;
+	letter-spacing: 5px;
+	box-shadow : 2px 2px 20px white;
+}
+#quizButton a:hover{
+	background : linear-gradient(to bottom, #646fc1, rgb(209,179,207));
+	color : white;
+}
+
+/* -----------------------------------------------------------------------------
+Cette partie concernera les quiz */
+main#quiz{
+	background : white;
+	border-radius: 10px;
+	padding : 10px;
+}
+main#quiz h1{
+	text-align : center;
+	color : #646fc1;
+	font-family : BebasNeue;
+	font-size : 40px;
+}
+main#quiz fieldset{
+	margin-bottom : 30px;
+	width : 80%;
+	margin : auto;
+	border : 0;
+	background : rgba(0, 0, 0, 0.1);
+	margin-bottom : 20px;
+	margin-top : 30px;
+	box-shadow : 5px 5px 15px;
+}
+main#quiz fieldset label{
+	display: block;
+	font-family: "bebasNeue book";
+	margin-bottom : 20px;
+	padding-top : 3px;
+}
+main#quiz fieldset input[type="radio"]{
+	float : left;
+	margin-right : 20px;
+}
+main#quiz fieldset h5{
+	font-family : "BebasNeue regular";
+	color : purple;
+}
+main#quiz form button[type="submit"]{
+	display: block;
+	margin : auto;
+	background : linear-gradient(to bottom left, purple, blue);
+	color : white;
+	height : 50px;
+	width : 100px;
+	border-radius : 20px;
+	font-family : BebasNeue;
+	outline : none;
+}
+main#quiz form button[type="submit"]:hover{
+	cursor : pointer;
+}
+main#quiz .answer{
+	font-style : italic;
+	text-decoration: underline;
+}
+main#quiz .answer.goodAnswer{
+	color : green;
+}
+main#quiz .answer.wrongAnswer{
+	color : red;
+}
+
