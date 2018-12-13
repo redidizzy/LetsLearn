@@ -1,0 +1,466 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="../style.css"/>
+		<title> Apprendre Php </title>
+	</head>
+	<body>
+		<div id="header_nav">
+			<header>	
+				<a href="../index.html"><img src="../logo.png"></a><hgroup><h1>Let's Learn</h1><h4>Apprenons tous ensemble</h4></hgroup>
+			</header>
+			<nav id="menu">
+				<ul> 
+					<li><a href="../index.html">Accueil</a></li>
+					<li>
+						<a href="../index.html#cours">Nos cours</a>
+						<ul> 
+							<li>
+								<a href="coursHtml.html">Html</a>
+							</li>
+							<li>
+								<a href="coursCss.html">CSS</a>
+							</li>
+							<li>
+								<a href="coursJavascript.html">JavaScript</a>
+							</li>
+							<li>
+								<a href="coursPhp.html">PHP</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div id="quizButton">
+			<a href="../quiz/quizPhp.html">Quiz!</a>
+		</div>
+		<nav id="sommaire">
+			<h5>Sommaire</h5>
+			<ul>
+				<li><a href="#introduction">Introduction</a></li>
+				<li><a href="#variables">Les variables</a></li>
+				<li><a href="#conditionsEtBoucles">Les conditions et les boucles</a></li>
+				<li><a href="#tableaux">Les tableaux</a></li>
+				<li><a href="#fonctions">Les fonctions</a></li>
+			</ul>
+		</nav>
+		<main id="cours">
+			
+		<section id="introduction">
+			<header>
+				<h1>Introduction</h1>
+			</header>
+			<p>
+				On considère qu'il existe deux types de sites web : les sites <em>statiques</em> et les sites <em>dynamiques</em>.
+				Les sites statiques : ce sont des sites réalisés uniquement à l'aide des langages HTML et CSS. Ils fonctionnent très bien mais leur contenu 
+				ne peut pas être mis à jour automatiquement : il faut que le propriétaire du site (le webmaster) modifie le code source pour y ajouter des 
+				nouveautés. Ce n'est pas très pratique quand on doit mettre à jour son site plusieurs fois dans la même journée ! Les sites statiques sont 
+				donc bien adaptés pour réaliser des sites « vitrine », pour présenter par exemple son entreprise, mais sans aller plus loin. Ce type de site se fait de plus en plus rare aujourd'hui, car dès que l'on rajoute un élément d'interaction (comme un formulaire de contact), on ne parle plus de site statique mais de site dynamique.
+				Les sites dynamiques : plus complexes, ils utilisent d'autres langages en plus de HTML et CSS, tels que <strong>PHP</strong> et MySQL. Le contenu de ces sites 
+				web est dit <em>dynamique</em> parce qu'il peut changer sans l'intervention du webmaster ! La plupart des sites web que vous visitez aujourd'hui, 
+				y compris OpenClassrooms, sont des sites dynamiques. Le seul prérequis pour apprendre à créer ce type de sites est de déjà savoir réaliser des sites statiques en HTML et CSS.
+			</p>
+			<header>
+				<h2>Comment fonctionne un site web ?</h2>
+			</header>	
+			<p>
+				Lorsque vous voulez visiter un site web, vous tapez son adresse dans votre navigateur web, que ce soit Mozilla Firefox, 
+				Internet Explorer, Opera, Safari ou un autre. Mais ne vous êtes-vous jamais demandé comment faisait la page web pour arriver 
+				jusqu'à vous ?<br />
+				Il faut savoir qu'Internet est un réseau composé d'ordinateurs. Ceux-ci peuvent être classés en deux catégories.
+				<strong>Les clients</strong> : ce sont les ordinateurs des internautes comme vous. Votre ordinateur fait donc partie de la catégorie des clients. 
+				Chaque client représente un visiteur d'un site web. Dans les schémas qui vont suivre, l'ordinateur d'un client sera représenté par 
+				l'image suivante.<br/>
+				<strong>Les serveurs</strong> : ce sont des ordinateurs puissants qui stockent et délivrent des sites web aux internautes, c'est-à-dire aux clients. 
+				La plupart des internautes n'ont jamais vu un serveur de leur vie. Pourtant, les serveurs sont indispensables au bon fonctionnement du Web.
+			</p>
+			
+		</section>
+		<section id="variables">
+			<header>
+				<h1>Les variables</h1>
+			</header>
+			<p>
+				Une variable, c'est une petite information stockée en mémoire temporairement. Elle n'a pas une grande durée de vie. 
+				En PHP, la variable (l'information) existe tant que la page est en cours de génération. Dès que la page PHP est générée, 
+				toutes les variables sont supprimées de la mémoire car elles ne servent plus à rien. Ce n'est donc pas un fichier qui reste stocké sur 
+				le disque dur mais une petite information temporaire présente en mémoire vive.<br/>
+				C'est à vous de créer des variables. Vous en créez quand vous en avez besoin pour retenir des informations.
+			</p>
+			<header>
+				<h2>Un nom et une valeur</h2>
+			</header>
+			<p>
+				Une variable est toujours constituée de deux éléments :
+				<ul>
+					<li>son nom : pour pouvoir la reconnaître, vous devez donner un nom à votre variable. Par exemple <code>age_du_visiteur</code></li>
+					<li>sa valeur : c'est l'information qu'elle contient, et qui peut changer. Par exemple : 17</li>
+				</ul>	
+			</p>
+
+			<header>
+				<h2>Les différents types de variables</h2>
+			</header>
+			<p>
+				Les variables sont capables de stocker différents types d'informations. On parle de <strong>types de données</strong>. Voici les principaux types à connaître.
+				<ul>
+					<li>
+						<span>Les chaînes de caractères (string)</span> : les chaînes de caractères sont le nom informatique qu'on donne au texte. Tout texte est 
+						appelé chaîne de caractères. En PHP, ce type de données a un nom :string. On peut stocker des textes courts comme très longs 
+						au besoin.
+					</li>
+					<li>
+						<span>Les nombres entiers (int)</span> : ce sont les nombres du type 1, 2, 3, 4, etc. On compte aussi parmi eux les entiers relatifs : -1, -2, -3…
+					</li>
+					<li>
+						<span>Les nombres décimaux (float)</span> : ce sont les nombres à virgule, comme 14,738. On peut stocker de nombreux chiffres après la 
+						virgule, ce qui devrait convenir pour la plupart des usages que vous en ferez. Attention, les nombres doivent être écrits 
+						avec un point au lieu de la virgule (c'est la notation anglaise).
+					</li>
+					<li>
+						<span>Les booléens (bool)</span> : c'est un type très important qui permet de stocker soit vrai soit faux. Cela permet de retenir si une 
+						information est vraie ou fausse. On les utilise très fréquemment. On écrit "true" pour vrai, et "false" pour faux.
+					</li>
+					<li>
+						<span>Rien (NULL)</span> : aussi bizarre que cela puisse paraître, on a parfois besoin de dire qu'une variable ne contient rien. 
+						Rien du tout. On indique donc qu'elle vautNULL. Ce n'est pas vraiment un type de données, mais plutôt l'absence de type.
+					</li>
+				</ul>	
+			</p>
+			
+			<header>
+				<h2>Afficher le contenu d'une variable</h2>
+			</header>
+			<p>
+				Vous vous souvenez que l'on peut afficher du texte avececho ? On peut aussi s'en servir pour afficher la valeur d'une variable !
+			</p>
+			<div class="boutDeCode">
+				Exemple :
+				<img alt="un code php" src="images/19.png" />
+			</div>
+			
+			<header>
+				<h2>La concaténation</h2>
+			</header>	
+				<h3>Concaténer avec des guillemets doubles</h3>
+				<p>
+					Avec des guillemets doubles, c'est le plus simple. Vous pouvez écrire le nom de la variable au milieu du texte et il sera 
+					remplacé par sa valeur.
+				</p>
+				<div class="boutDeCode">
+					Exemple :
+					<img alt="un code php" src="images/20.png" />
+				</div>
+				<p>
+					En effet, lorsque vous utilisez des guillemets doubles, les variables qui se trouvent à l'intérieur sont analysées et remplacées 
+					par leur vraie valeur. Ça a le mérite d'être une solution facile à utiliser, mais je vous recommande plutôt celle des guillemets 
+					simples, que nous allons voir dès à présent.
+				</p>
+				
+				<h3>Concaténer avec des guillemets simples</h3>
+				<p>
+					Cette fois, il va falloir écrire la variable en dehors des guillemets et séparer les éléments les uns des autres à l'aide d'un point.	
+				</p>
+				<div class="boutDeCode">
+					Exemple :
+					<img alt="un code php" src="images/21.png" />
+				</div>
+				<p>
+					Ça a l'air bien plus compliqué, mais en fait c'est cette méthode qu'utilisent la plupart des programmeurs expérimentés en PHP. 
+					En effet, le code est plus lisible, on repère bien la variable alors que tout à l'heure elle était comme « noyée » dans le texte. 
+					D'autre part, votre éditeur de texte devrait vous colorer la variable, ce qu'il ne faisait pas pour le code précédent.
+				</p>
+				
+				<header>
+					<h2>Faire des calculs simples</h2>
+				</header>
+				<h3>Les operations de base</h3>
+				<p>
+					Les signes à connaître pour faire les quatre opérations de base (vous les trouverez sur votre pavé numérique, à droite du clavier en 
+					principe) sont représentés par le tableau suivant : "+", "-", "*", "/".
+				</p>
+				<div class="boutDeCode">
+					Exemple :
+					<img alt="un code php" src="images/22.png" />
+				</div>
+			<footer>
+				<a href="#header_nav">Retour</a>
+			</footer>
+		</section>
+		
+		<section id="conditionsEtBoucles">
+			<header>
+				<h1>Les conditions et les boucles</h1>
+			</header>
+			<section>
+				<header>
+					<h2>Les conditions</h2>
+				</header>
+				<h3>La structure de base : if… else</h3>
+				<p>
+					Voici ce qu'on doit écrire, dans l'ordre, pour utiliser une condition.
+					Pour introduire une condition, on utilise le mot <strong>if</strong>, qui en anglais signifie « si ».
+					On ajoute à la suite entre parenthèses la condition en elle-même (vous allez voir que vous pouvez inventer une infinité de conditions).
+					Enfin, on ouvre des accolades à l'intérieur des quelles on placera les instructions à exécuter si la condition est remplie.
+					
+				</p>
+				<div class="remarque">
+					<h4>Remarque :</h4>
+					<p>
+						Au fait, au départ, une variable ne contient rien. Sa valeur est vide, on dit qu'elle vautNULL, c'est-à-dire rien du tout.
+						Pour vérifier si la variable est vide, vous pouvez taper :<code>if ($variable == NULL)…</code>
+					</p>
+				</div>
+				<h3>Le cas d'un booleen</h3>
+				<p>
+					Si vous regardez bien le dernier code source (avec$autorisation_entrer), vous ne trouvez pas qu'il serait plus adapté d'utiliser des 
+					booléens ?
+					On a parlé des booléens dans le chapitre sur les variables. Vous vous souvenez ?
+					Ce sont ces variables qui valent soittrue(vrai) soitfalse(faux). 
+					Eh bien, les booléens sont particulièrement utiles avec les conditions !</br >
+					Mais un des avantages des booléens, c'est qu'ils sont particulièrement adaptés aux conditions.
+					Pourquoi ? Parce qu'en fait vous n'êtes pas obligés d'ajouter le== true. Quand vous travaillez sur une variable booléenne, PHP comprend 
+					très bien ce que vous avez voulu dire.
+				</p>
+				<h3>Conditions multiple</h3>
+				<p>
+					Ce qu'on va essayer de faire, c'est de poser plusieurs conditions à la fois. Pour cela, on aura besoin de nouveaux mots-clés. 
+					Voici les principaux à connaître :
+				</p>
+				<table>
+					<caption>Operateurs logique "OU" et "ET"</caption>
+					<thead>
+						<tr>
+							<th>Mot-clé</th>
+							<th>Signification</th>
+							<th>Symbole</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>OR</td>
+							<td>Ou</td>
+							<td>||</td>
+						</tr>
+						<tr>
+							<td>AND</td>
+							<td>Et</td>
+							<td>&&</td>
+						</tr>
+						
+					</tbody>
+				</table>
+			</section>
+			
+			<section>
+				<header>
+					<h2>Les boucles</h2>
+				</header>
+				<p>
+					Qu'est-ce qu'une boucle ? C'est une structure qui fonctionne sur le même principe que les conditions (if… else). D'ailleurs, vous 
+					allez voir qu'il y a beaucoup de similitudes avec le chapitre sur les conditions.
+					Concrètement, une boucle permet de répéter des instructions plusieurs fois. En clair, c'est un gain de temps, c'est très pratique, 
+					et bien souvent indispensable.
+				</p>
+				<h3>Boucle "WHILE"</h3>
+				<p>
+					whilepeut se traduire par « tant que ». Ici, on demande à PHP : TANT QUE$continuer_boucleest vrai, exécuter ces instructions.
+					Les instructions qui sont répétées en boucle se trouvent entre les accolades{et}. Mais bon là je ne vous apprends rien, vous commencez 
+					à avoir l'habitude de voir des accolades de partout. ;
+					Ce n'est pas beaucoup plus compliqué que ça, il n'y a guère plus de choses à savoir. Cependant, je vais quand même vous montrer un ou 
+					deux exemples d'utilisation de boucles, pour que vous voyiez à quoi ça peut servir…
+					Pour notre premier exemple, on va supposer que vous avez été punis et que vous devez recopier 100 fois « Je ne dois pas regarder les 
+					mouches voler quand j'apprends le PHP. ».
+					Avant, il fallait prendre son mal en patience et ça prenait des heuuuures… Maintenant, avec PHP, on va faire ça en un clin d'œil !
+				</p>
+				<div class="boutDeCode">
+					Exemple :
+					<img alt="un code php" src="images/23.png" />
+				</div>
+				<h3>Boucle "FOR"</h3>
+				<p>
+					<strong>for</strong> est un autre type de boucle, dans une forme un peu plus condensée et plus commode à écrire, ce qui fait que <strong>for</strong> est 
+					assez fréquemment utilisé.
+					Cependant, sachez queforetwhiledonnent le même résultat et servent à la même chose : répéter des instructions en boucle. L'une peut 
+					paraître plus adaptée que l'autre dans certains cas, cela dépend aussi des goûts.
+					Alors, comment ça marche unfor ? Ça ressemble beaucoup au <strong>while</strong>, mais c'est la première ligne qui est un peu particulière. Pour que vous 
+					voyiez bien la différence avec le <strong>while</strong>, je reprends exactement l'exemple précédent, mais cette fois avec un <strong>for</strong>
+				</p>
+				<div class="boutDeCode">
+					Exemple :
+					<img alt="un code php" src="images/24.png" />
+				</div>
+			</section>
+			<footer>
+				<a href="#header_nav">Retour</a>
+			</footer>
+		</section>
+		
+		<section id="tableaux">
+			<header>
+				<h1>Les tableaux</h1>
+			</header>
+			<p>
+				Nous abordons ici un aspect très important du PHP : <em>les arrays</em>.
+				Vous allez voir qu'il s'agit de variables « composées », que l'on peut imaginer sous la forme de tableaux.
+				On peut faire énormément de choses avec les arrays et leur utilisation n'est pas toujours très facile. Cependant, ils vont très rapidement 
+				nous devenir indispensables et vous devez bien comprendre leur fonctionnement. Si vous y parvenez, nous aurons fait le tour des bases du 
+				PHP et vous serez fin prêts pour la suite, qui s'annonce concrète et passionnante.
+			</p>
+			<section>
+				<header>
+					<h2>Tableaux numérotés</h2>
+				</header>
+				<p>
+					c'est ce qu'on appelle une variable « tableau ». Elle n'a pas qu'une valeur, mais plusieurs (vous pouvez en mettre autant que vous voulez).
+					Dans un array, les valeurs sont rangées dans des « cases » différentes. Ici, nous travaillons sur un array numéroté, c'est-à-dire que 
+					chaque case est identifiée par un numéro. Ce numéro est appelé clé.
+				</p>
+				<h3>construction d'un tableau numéroté</h3>
+				<p>
+					Pour créer un tableau numéroté en PHP, on utilise généralement la fonction <code>array('val1', 'val2', 'val3', ...)</code>.
+					Cet exemple vous montre comment créer l'array "$prenoms".
+				</p>
+				<div class="boutDeCode">
+					Exemple :
+					<img alt="un code php" src="images/25.png" />
+				</div>
+				<h3>Afficher un tableau numéroté</h3>
+				<p>
+					Pour afficher un élément, il faut donner sa position entre crochets après$prenoms. Cela revient à dire à PHP :
+					« Affiche-moi le contenu de la case n°1 de$prenoms. »
+					Pour faire cela en PHP, il faut écrire le nom de la variable, suivi du numéro entre crochets.
+				</p>
+				<div class="remarque">
+					<h4>Remarque :</h4>
+					<p>
+						Si vous oubliez de mettre les crochets, ça ne marchera pas (ça affichera juste « Array »…). Dès que vous travaillez sur des arrays, 
+						vous êtes obligés d'utiliser les crochets pour indiquer dans quelle « case » on doit aller chercher l'information, sinon PHP ne sait 
+						pas quoi récupérer.
+					</p>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h2>Tableaux associatifs</h2>
+				</header>
+				<p>
+					Les tableaux associatifs fonctionnent sur le même principe, sauf qu'au lieu de numéroter les cases, on va les étiqueter en leur donnant 
+					à chacune un nom différent.
+					Par exemple, supposons que je veuille, dans un seul array, enregistrer les coordonnées de quelqu'un (nom, prénom, adresse, ville, etc.). 
+					Si l'array est numéroté, comment savoir que le n°0 est le nom, le n°1 le prénom, le n°2 l'adresse… ? C'est là que les tableaux 
+					associatifs deviennent utiles.
+				</p>
+				<h3>Construire un tableau associatif</h3>
+				<p>
+					Pour en créer un, on utilisera la fonctionarraycomme tout à l'heure, mais on va mettre « l'étiquette » devant chaque information.
+				</p>
+				<div class="boutDeCode">
+					Exemple :
+					<img alt="un code php" src="images/26.png" />
+				</div>
+				<h3>Afficher un tableau associatif</h3>
+				<p>
+					Pour afficher un élément, il suffit d'indiquer le nom de cet élément entre crochets, ainsi qu'entre guillemets ou apostrophes puisque 
+					l'étiquette du tableau associatif est un texte.
+				</p>
+			</section>
+			<footer>
+				<a href="#header_nav">Retour</a>
+			</footer>
+		</section>
+		
+		<section id="fonctions">
+			<header>
+				<h1>Les fonctions</h1>
+			</header>
+			<h2>Qu'est-ce qu'une fonction ?</h2>
+			<p>
+				Une fonction est une série d'instructions qui effectue des actions et qui retourne une valeur. En général, dès que vous avez besoin 
+				d'effectuer des opérations un peu longues dont vous aurez à nouveau besoin plus tard, il est conseillé de vérifier s'il n'existe pas déjà 
+				une fonction qui fait cela pour vous. Et si la fonction n'existe pas, vous avez la possibilité de la créer.
+				Imaginez que les fonctions sont des robots comme dans la figure suivante.
+			</p>
+			<h2>Les fonctions prêtes à l'emploi de PHP</h2>
+			<p>
+				PHP propose des centaines et des centaines de fonctions prêtes à l'emploi. Sur le site officiel, la documentation PHP les répertorie toutes, 
+				classées par catégories.
+				Ces fonctions sont très pratiques et très nombreuses. En fait, c'est en partie là que réside la force de PHP : ses fonctions sont vraiment 
+				excellentes car elles couvrent la quasi-totalité de nos besoins. J'ai en fait remarqué que, pratiquement à chaque fois que je m'apprêtais 
+				à écrire une fonction, celle-ci existait déjà.
+			</p>
+			<h3>Traitement des chaînes de caractères</h3>
+			<p>
+				De nombreuses fonctions permettent de manipuler le texte. En voici quelques-unes qui vont vous montrer leur intérêt.
+			</p>
+			<h4>strlen: longueur d'une chaîne</h4>
+			<p>
+				Cette fonction retourne la longueur d'une chaîne de caractères, c'est-à-dire le nombre de lettres et de chiffres dont elle est constituée 
+				(espaces compris).
+			</p>
+			<h4>str_replace: rechercher et remplacer</h4>
+			<p>
+				remplace une chaîne de caractères par une autre.
+			</p>
+			<h4>str_shuffle: mélanger les lettres</h4>
+			<p>
+				Pour vous amuser à mélanger aléatoirement les caractères de votre chaîne !
+			</p>
+			<h4>strtolower: écrire en minuscules</h4>
+			<p>
+				met tous les caractères d'une chaîne en minuscules.
+			</p>
+			
+			<h3>Récupérer la date</h3>
+			<p>
+				Nous allons découvrir la fonction qui renvoie l'heure et la date. Il s'agit dedate(un nom facile à retenir, avouez !). 
+				Cette fonction peut donner beaucoup d'informations.
+			</p>
+			<h2>Créer ses propres fonctions</h2>
+			<p>
+				Bien que PHP propose des centaines et des centaines de fonctions (j'insiste, mais il faut dire qu'il y en a tellement !), parfois il n'y 
+				aura pas ce que vous cherchez et il faudra écrire vous-mêmes la fonction. C'est une façon pratique d'étendre les possibilités offertes par PHP.
+				Quand écrire une fonction ? En général, si vous effectuez des opérations un peu complexes que vous pensez avoir besoin de refaire 
+				régulièrement, il est conseillé de créer une fonction.
+			</p>
+			
+			<div class="boutDeCode">
+				Exemple :
+				<img alt="un code php" src="images/27.png" />
+			</div>
+			<div>
+				Résultat :
+				<img alt="resulat" src="images/28.png" />
+			</div>
+			<footer>
+				<a href="#header_nav">Retour</a>
+			</footer>
+		</section>
+		
+		</main>
+		<footer>
+			<div>
+				<h4>Avec le soutien de l'USTHB</h4>
+		
+				<img src="../usthb.png"/>
+			</div>
+			<div id="suivezNous">
+				<h4>Suivez-nous !</h4>
+				<img alt="Facebook" src="../fb.png"/>
+				<img alt="RSS" src="../rss.png"/>
+				<img alt="Twitter" src="../twitter.png"/>
+				<img alt="Vimeo" src="../vimeo.png"/>
+				<img alt="Flickr" src="../flickr.png"/>
+			</div>	
+			<div id="contactezNous">
+				<h4>Contactez-nous</h4>
+				<address>
+					Email : auteur@gmail.com
+				</address>
+			</div>
+			
+			Let's Learn | 2018 © Tous droits résérvés
+		</footer>
+	</body>
+</html>	

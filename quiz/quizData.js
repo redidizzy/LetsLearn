@@ -170,7 +170,7 @@ function insertQuestions(quiz){
     if(e.target && e.target.id== 'confirm'){
     	e.preventDefault();
     	var goodAnswers = 0;
-    	var questionNumber = 4;
+    	var questionNumber = quiz.length;
     	for(var i = 0; i<questionNumber; i++){
     		var choices = document.getElementsByName(i);
     		var question = choices[0].parentNode;
@@ -188,11 +188,11 @@ function insertQuestions(quiz){
     			}	
     		});
     	}
-    	if(goodAnswers < 4){
-    		alert("Vous avez eu un score de "+goodAnswers+" sur 4, appuyez sur OK pour voir vos mauvaises reponses ");
+    	if(goodAnswers < quiz.length){
+    		alert("Vous avez eu un score de "+goodAnswers+" sur "+quiz.length+", appuyez sur OK pour voir vos mauvaises reponses ");
     	}else{
     		bravo.play();
-    		alert("Bravo ! Vous avez eu un score de "+goodAnswers+" sur 4, vous maitrisez ce langage !");
+    		alert("Bravo ! Vous avez eu un score de "+goodAnswers+" sur "+quiz.length+", vous maitrisez ce langage !");
     	}
     }
  });

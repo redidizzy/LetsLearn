@@ -360,7 +360,7 @@ main#cours{
 	display : inline-block;
 }
 main#cours > section{
-	border-bottom : 2px solid blue;
+	border-bottom : 2px solid #9a25e6;
 	padding-bottom : 20px;
 }
 main#cours > section  header h1{
@@ -376,8 +376,13 @@ main#cours h2{
 	text-decoration : underline;
 }
 main#cours h3, main#cours h4{
-	color : #9a25e6;
 	font-family : "BebasNeue";
+}
+main#cours h3{
+	color : #9a25e6;
+}
+main#cours h4{
+	color : violet;
 }
 main#cours p{
 	text-align : justify;
@@ -562,6 +567,7 @@ main#quiz fieldset input[type="radio"]{
 main#quiz fieldset h5{
 	font-family : "BebasNeue regular";
 	color : purple;
+	font-size : 16px;
 }
 main#quiz form button[type="submit"]{
 	display: block;
