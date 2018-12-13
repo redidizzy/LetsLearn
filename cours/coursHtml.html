@@ -9,15 +9,6 @@
 			<header>	
 				<a href="index.html"><img src="../logo.png"></a><hgroup><h1>Let's Learn</h1><h4>Apprenons tous ensemble</h4></hgroup>
 			</header>
-			<!-- <nav id="menu">
-				<ul>
-					<li><a href="../index.html">Accueil</a></li>
-					<li><a href="#intoduction">Introduction</a></li>
-					<li><a href="#organiserTexte">Organiser son texte</a></li>
-					<li><a href="#structurePages">La structure d'une page html</a></li>
-					<li><a href="#balises">Les balises html</a></li>
-				</ul>
-			</nav> -->
 			<nav id="menu">
 			<ul> 
 				<li><a href="../index.html">Accueil</a></li>
@@ -40,47 +31,52 @@
 				</li>
 			</ul>
 		</div>
-		
 		<main id="cours">
 		<section id="introduction">
+			<nav id ="sommaire">
+				<h5>Sommaire</h5>
+				<ul>
+					<li><a href="../index.html">Accueil</a></li>
+					<li><a href="#intoduction">Introduction</a></li>
+					<li><a href="#organiserTexte">Organiser son texte</a></li>
+					<li><a href="#structurePages">La structure d'une page html</a></li>
+					<li><a href="#balises">Les balises html</a></li>
+				</ul>
+			</nav>
 			<header>
 				<h1>Introduction</h1>
 			</header>
 			<p>
 				<strong>HTML (HyperText Markup Language)</strong> : il a fait son apparition dès 1991 lors du lancement du Web. Son rôle est de gérer et organiser 
 				le contenu. C'est donc en HTML que vous écrirez ce qui doit être affiché sur la page : du texte, des liens, des images… Vous direz 
-				par exemple : « Ceci est mon titre, ceci est mon menu, voici le texte principal de la page, voici une image à afficher, etc. ».
+				par exemple : « Ceci est mon titre, ceci est mon sommaire, voici le texte principal de la page, voici une image à afficher, etc. ».
 			</p>
-			<p>
-				<h2>Les versions de HTML</h2>
-				<ul>
-					<li>
-						<strong>HTML 1 </strong>: c'est la toute première version créée par Tim Berners-Lee en 1991
+			<h2>Les versions de HTML</h2>
+			<ul>
+				<li>
+					<strong>HTML 1 </strong>: c'est la toute première version créée par Tim Berners-Lee en 1991
+				</li>
+				<li>
+					<strong> HTML 2 </strong>: la deuxième version du HTML apparaît en 1994 et prend fin en 1996 avec l'apparition du HTML 3.0.
+					C'est cette version qui posera en fait les bases des versions suivantes du HTML. Les règles et le fonctionnement de cette version sont
+					donnés par le W3C (tandis que la première version avait été créée par un seul homme)
 					</li>
-					<li>
-						<strong> HTML 2 </strong>: la deuxième version du HTML apparaît en 1994 et prend fin en 1996 avec l'apparition du HTML 3.0.
-						C'est cette version qui posera en fait les bases des versions suivantes du HTML. Les règles et le fonctionnement de cette version sont
-						donnés par le W3C (tandis que la première version avait été créée par un seul homme)
-						</li>
-					<li>
-						<strong> HTML 3 </strong>: apparue en 1996, cette nouvelle version du HTML rajoute de nombreuses possibilités au langage comme les
-						tableaux, les applets, les scripts, le positionnement du texte autour des images, etc
-					</li>
-					<li>
-						<strong> HTML 4 </strong>: cette version aura été utilisée un long moment durant les années 2000. Elle apparaît pour la première 
-						fois en 1998 et propose l'utilisation de frames (qui découpent une page web en plusieurs parties), des tableaux plus complexes, des 
-						améliorations sur les formulaires, etc. Mais surtout, cette version permet pour la première fois d'exploiter des feuilles de style, 
-						notre fameux CSS !
-					</li>
-					<li>
-						<strong>HTML 5 </strong>: c'est LA dernière version. De plus en plus répandue, elle fait beaucoup parler d'elle car elle apporte 
-						de nombreuses améliorations comme la possibilité d'inclure facilement des vidéos, un meilleur agencement du contenu, de nouvelles 
-						fonctionnalités pour les formulaires, etc. C'est cette version que nous allons découvrir ensemble.
-					</li>
-			</p>
-			<footer>
-				<a href="#menu">Retour</a>
-			</footer>
+				<li>
+					<strong> HTML 3 </strong>: apparue en 1996, cette nouvelle version du HTML rajoute de nombreuses possibilités au langage comme les
+					tableaux, les applets, les scripts, le positionnement du texte autour des images, etc
+				</li>
+				<li>
+					<strong> HTML 4 </strong>: cette version aura été utilisée un long moment durant les années 2000. Elle apparaît pour la première 
+					fois en 1998 et propose l'utilisation de frames (qui découpent une page web en plusieurs parties), des tableaux plus complexes, des 
+					améliorations sur les formulaires, etc. Mais surtout, cette version permet pour la première fois d'exploiter des feuilles de style, 
+					notre fameux CSS !
+				</li>
+				<li>
+					<strong>HTML 5 </strong>: c'est LA dernière version. De plus en plus répandue, elle fait beaucoup parler d'elle car elle apporte 
+					de nombreuses améliorations comme la possibilité d'inclure facilement des vidéos, un meilleur agencement du contenu, de nouvelles 
+					fonctionnalités pour les formulaires, etc. C'est cette version que nous allons découvrir ensemble.
+				</li>
+			</ul>
 		</section>
 	
 		<section id="organiserTexte">
@@ -135,7 +131,7 @@
 				</p>
 			</section>	
 			<footer>
-				<a href="#menu">Retour</a>
+				<a href="#sommaire">Retour</a>
 			</footer>
 		</section>
 		
@@ -227,10 +223,10 @@
 					<img alt="schema" title ="Sections de la page identifiées par les balises" src="images/12.png" style="width : 200px"/>
 				</div>
 			</section>
-		</section>
-		<footer>
-				<a href="#menu">Retour</a>
+			<footer>
+				<a href="#sommaire">Retour</a>
 		</footer>
+		</section>
 		<section id="balises">
 			<header>
 				<h1>Les balises html</h1>
@@ -372,7 +368,7 @@
 					</tbody>
 				</table>
 			<footer>
-				<a href="#menu">Retour</a>
+				<a href="#sommaire">Retour</a>
 			</footer>
 		</section>
 		

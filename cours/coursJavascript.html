@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="../style.css"/>
+		<title> Apprendre JavaScript </title>
+	</head>
+	<body>
+		<div id="header_nav">
+			<header>	
+				<a href="../index.html"><img src="../logo.png"></a><hgroup><h1>Let's Learn</h1><h4>Apprenons tous ensemble</h4></hgroup>
+			</header>
+			<nav id="menu">
+				<ul> 
+					<li><a href="../index.html">Accueil</a></li>
+					<li>
+						<a href="../index.html#cours">Nos cours</a>
+						<ul> 
+							<li>
+								<a href="coursHtml.html">Html</a>
+							</li>
+							<li>
+								<a href="coursCss.html">CSS</a>
+							</li>
+							<li>
+								<a href="#">JavaScript</a>
+							</li>
+							<li>
+								<a href="coursPhp.html">PHP</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<main id="cours">
+		<section id="introduction">
+			<nav id="sommaire">
+				<h5>Sommaire</h5>
+				<ul>
+					<li><a href="#introduction">Introduction</a></li>
+					<li><a href="#variablesEtConditions">Les variables et les conditions</a></li>
+					<li><a href="#chaines">Les chaines de caractères</a></li>
+					<li><a href="#objets">Les objets</a></li>
+					<li><a href="#racapitulatif">Récapitulatif</a></li>
+				</ul>
+			</nav>
+				<header>
+					<h1>Introduction</h1>
+				</header>
+				<p>
+					Historiquement créé pour animer les pages web, le langage JavaScript peut maintenant être utilisé pour programmer dans de très nombreux 
+					environnements : serveurs, applications mobiles, objets connectés...
+					<strong>JavaScript</strong> est devenu essentiel pour de très nombreux développeurs. Il s'agit d'un excellent choix comme premier 
+					langage de programmation.<br />
+					Il a été standardisé sous le nom d'ECMAScript et subit des améliorations régulières.<br />
+					La version de <strong>JavaScript</strong> utilisée dans ce cours est <strong>ES2015</strong>, parfois appelée <strong>ES6</strong>. 
+					Bien que récente, elle est maintenant bien supportée.
+				</p>
+				<h3>Histoire du JavaScript</h3>
+				<p>
+					JavaScript est avant tout le langage de programmation du Web. Il a été inventé en 1995 par Brendan Eich, qui travaillait à l'époque pour 
+					la société Netscape, créatrice du premier navigateur Web populaire (l'ancêtre de Firefox). 
+				</p>
+		</section>	
+		<section id="variablesEtConditions">
+			<header>
+				<h1>Les variables et conditions</h1>
+			</header>
+			<section id="lesVariables">
+				<h2>Les variables</h2>
+				<h3>Propriétés d'une variable</h3>
+				<p>
+					Une variable possède trois grandes propriétés :
+					<ul>
+						<li>Son nom, qui permet de l'identifier. Un nom de variable peut contenir des lettres majuscules ou minuscules, des chiffres (sauf en première position) 
+						et certains caractères comme le dollar ($)  ou le tiret bas, appelé underscore (_).</li>
+						<li>Sa valeur, qui est la donnée actuellement mémorisée dans cette variable.</li>
+						<li>Son type, qui détermine le rôle et les opérations applicables à cette variable.</li> 
+					</ul>
+				</p>
+				<div class="remarque">
+					<h4>Remarque :</h4>
+					<p>
+						JavaScript n'impose pas de définir le type d'une variable. Ce type est déduit de la valeur stockée dans la variable, et peut donc 
+						changer au fur et à mesure de l'exécution du programme : on dit que JavaScript est un langage à <em>typagedynamique</em>. D'autres langages 
+						comme C ou Java imposent la définition du type des variables. On parle alors de <em>typagestatique</em>.
+					</p>
+				</div>
+				<h3>Déclaration des variables</h3>
+				<p>
+					Avant de pouvoir stocker des informations dans une variable, il faut la créer. Cette opération s'appelle la déclaration de la variable. 
+					Au niveau de l'ordinateur, déclarer une <em>variable</em> déclenche la réservation d'une zone de la mémoire attribuée à cette variable. 
+					Le programme peut ensuite lire ou écrire des données dans cette zone mémoire en manipulant la variable.<br />
+					En JavaScript, on déclare une variable à l'aide du mot-clé <em>let</em> ou <em>var</em> suivi du nom de la variable ou 
+					directement de nom de la variable et avec <em>const</em> pour une constante.
+				</p>
+				<h3>Convertion de types</h3>
+				<p>
+					L'évaluation d'une expression peut entraîner des conversions de type. Ces conversions sont dites implicites : elles sont faites 
+					automatiquement, sans intervention du programmeur. Par exemple, l'utilisation de l'opérateur+ entre une valeur de type chaîne et 
+					une valeur de type nombre provoque la concaténation des deux valeurs dans un résultat de type chaîne.
+				</p>
+				<p>
+					Le langage JavaScript est extrêmement tolérant au niveau des conversions de type. Cependant, il arrive qu'aucune conversion ne soit 
+					possible. En cas d'échec de la conversion d'un nombre, la valeur du résultat est <em>NaN</em> (Not a Number).
+					<div class="boutDeCode">
+						Exemple :
+						<img alt="un code js" src="images/13.png" />
+					</div>
+				</p>
+			</section>
+			<section id="lesConditions">
+				<h2>Les conditions</h2>
+				<h3>L'instruction if/else</h3>
+				<p>
+					La syntaxe est : <code> if(condition){ instructions1 ... }else{ instructions2 ... }</code>, si la condition est vraie, alors exécute 
+					les instructions "instructions1" contenues dans le bloc de code, sinon exécute les instructions "instructions2".
+					<div class="boutDeCode">
+						Exemple :
+						<img alt="un code js" src="images/14.png" />
+					</div>
+				</p>
+				<h3>Exprimer un choix</h3>
+				<p>
+					Lorsqu'un programme consiste à déclencher un bloc d'opérations parmi plusieurs selon la valeur d'une expression, on peut 
+					l'écrire en utilisant l'instruction JavaScript <em>switch</em>.
+				</p>
+				<div class="boutDeCode">
+					Exemple :
+					<img alt="un code js" src="images/15.png" />
+				</div>
+				
+			</section>
+			<footer>
+				<a href="#sommaire">Retour</a>
+			</footer>
+		</section>
+		
+		<section id="chaines">
+			<header>
+			<h1>Les cahine de caractères</h1>
+			</header>
+			<h3>Rappel</h3>
+			<p>
+				Une valeur de type <em>chaîne</em> (string) permet de représenter un texte.<br />
+				En JavaScript, on définit une chaîne en plaçant un texte entre guillemets simples <code>'je suis une chaîne'</code> ou entre guillemets 
+				doubles <code>"je suis une chaîne"</code>. Ce cours privilégie l'utilisation de guillemets doubles. 
+				On peut insérer dans une chaîne certains caractères spéciaux en utilisant le caractère\ ("antislash" ou "backslash") suivi d'un autre caractère. Par exemple,\n définit un retour à la ligne.
+			</p>
+			<h3>Longueur d'une chaine</h3>
+			<p>
+				Pour obtenir la longueur d'une chaîne (c'est-à-dire le nombre de caractères qui la composent, qu'on appelle également sa taille), 
+				il suffit de lui ajouter<em>.length</em>. On obtient la longueur sous la forme d'une valeur entière.
+				<div class="boutDeCode">
+					Exemple :
+					<img alt="un code js" src="images/16.png" />
+				</div>
+			</p>
+			<h3>Convertir une chaîne en minuscules ou en majuscules</h3>
+			<p>
+				Une valeur de type chaîne peut être convertie en minuscules en lui ajoutant<em>.toLowerCase()</em>. De même, on peut lui ajouter<em>.toUpperCase()</em>
+				pour la convertir en majuscules. Ces opérations renvoient toutes deux une nouvelle chaîne.
+			</p>
+			<h3>Comparer deux chaînes</h3>
+			<p>
+				La comparaison entre deux chaînes s'effectue avec l'opérateur <em>==</em>. Cette opération renvoie une valeur booléenne : <em>true</em> si les deux 
+				chaînes sont égales,<em>false</em> sinon.
+				<div class="remarque">
+					<h4>Remarque :</h4>
+					<p>
+						Attention cependant : la comparaison entre chaînes est sensible à <em>la casse</em>. Cela signifie que la présence de 
+						majuscules ou de minuscules dans les chaînes intervient dans le résultat de leur comparaison. Deux chaînes contenant le même 
+						texte mais pas les mêmes minuscules/majuscules ne seront pas considérées comme égales.
+					</p>
+				</div>
+			</p>
+			<footer>
+				<a href="#sommaire">Retour</a>
+			</footer>
+		</section>
+		
+		<section id="objets">
+			<header>
+				<h1>Les objets</h1>
+			</header>
+			<h3>Petite introduction</h3>
+			<p>
+				Tout comme ce stylo, un <strong>objet informatique</strong> est <strong>une entité qui possède des propriétés</strong>. Chaque propriété définit une caractéristique de 
+				l'objet. Une propriété peut être une information associée à l'objet (exemple : la couleur du stylo) ou une action 
+				(exemple : la capacité du stylo à écrire).
+			</p>
+			<p>
+				Comme de nombreux autres langages, JavaScript permet de programmer en utilisant des objets : on dit que ce langage est orienté objet. 
+				Il vous fournit un certain nombre d'objets prédéfinis tout en vous permettant de créer les vôtres.
+			</p>
+			<h3>Création d'un objet littéral</h3>
+			<p>
+				En JavaScript, on peut créer un objet en définissant ses propriétés à l'intérieur d'une paire d'accolades :  { ... };.
+				Cette manière de créer des objets est appelée syntaxe littérale.
+				<div class="boutDeCode">
+					Exemple :
+					<img alt="un code js" src="images/17.png" />
+				</div>
+				Le code ci-dessus définit une variable nommée <em>stylo</em> dont la valeur est un objet : on dit aussi que <em>stylo</em> est un objet. Cet objet possède 
+				trois propriétés :<em>type</em>,<em>couleur</em> et <em>marque</em>. Chaque propriété possède un nom et une valeur, et est séparée des autres par une virgule<em>,</em> (sauf la dernière).<br /> 
+				Une propriété peut être vue comme une sorte de variable attachée à un objet.
+			</p>
+			<h3>Création d'un objet à l'aide d'un constructeur</h3>
+			<p>
+				Une autre possibilité pour créer des objets JavaScript consiste à utiliser un <em>constructeur</em>. Un constructeur est une fonction particulière dont le rôle est d'initialiser un nouvel objet. Son nom commence souvent par une lettre majuscule, mais ce n'est pas une obligation.‌
+				La création de l'objet à partir du constructeur est appelée <em>l'instanciation</em>. Elle s'effectue à l'aide du mot-clé <em>new</em>.
+			</p>
+			<h3>Utilisation d'un objet</h3>
+			<p>
+				Une fois l'objet créé, on peut accéder à la valeur d'une de ses propriétés en utilisant la notation pointéenomObjet.nomPropriete : 
+				on utilise un point (.) entre l'objet et la propriété dont on veut obtenir la valeur.
+				<div class="boutDeCode">
+					Exemple :
+					<img alt="un code js" src="images/18.png" />
+				</div>
+				<div class="remarque">
+					<h4>Remarque :</h4>
+					<p>
+						Il existe une autre syntaxe pour accéder aux propriétés d'un objet : <em>nomObjet['nomPropriete']</em>. AInsi, l'exemple suivant produit 
+						exactement le même résultat que le précédent.
+					</p>
+				</div>
+			</p>
+			<h3>Modification d'un objet</h3>
+			<p>
+				Une fois un objet créé, on peut modifier les valeurs de ses propriétés avec la syntaxe <code>monObjet.maPropriete = nouvelleValeur</code>.
+			</p>
+			<footer>
+				<a href="#sommaire">Retour</a>
+			</footer>
+		</section>
+		
+		<section id="recapitulatif">
+			<header>
+				<h1>Bilan récapitulatif</h1>
+			</header>
+			<p>
+				Voici une petite synthèse de ce que vous venez d'apprendre.
+				<ul>
+					<li>
+						Un programme est une liste d'ordres donnés à un ordinateur. Le rôle du programmeur est d'écrire des programmes qui produiront de 
+						manière fiable les résultats attendus.
+					</li>
+					<li>
+						Parmi les nombreux langages de programmations existants, JavaScript se distingue par son universalité : historiquement associé au 
+						monde du Web, il est maintenant présent partout, des serveurs aux applications mobiles en passant par les objets connectés.</li>
+					<li>
+						Un programme JavaScript est une suite d'instructions rassemblées dans un fichier portant l'extension .js. On peut le tester depuis 
+						un navigateur Web en ouvrant une page HTML qui charge ce fichier.
+					</li>
+					<li>
+						Dans un programme, on mémorise des valeurs en les stockant dans des variables. Une variable est un conteneur d'information.
+					</li>
+					<li>
+						Le type d'une valeur détermine son rôle et les opérations qui lui sont applicables. Les principaux types de bases du langage JavaScript 
+						sont : nombre, chaîne de caractères, booléen et objet.
+					</li>
+					<li>
+						On utilise l'instruction <em>if</em> pour exécuter des instructions en fonction d'une condition vraie ou fausse, et l'instruction switch 
+						pour exécuter un groupe d'instructions parmi plusieurs.</li>
+					<li>
+						On peut répéter des instructions en les incluant dans une boucle <em>while</em> ou dans une boucle <em>for</em>.
+					</li>
+					<li>
+						La création d'une <strong>fonction</strong>permet d'isoler un ensemble d'instructions qui réalisent une tâche donnée. Une fonction peut être 
+						appelée depuis n'importe quel emplacement du programme, rendant le code source plus modulaire. Une fonction peut recevoir des 
+						informations sous la forme de <strong>paramètres</strong> et renvoyer ou non une valeur de retour.
+					</li>
+					<li>
+						La programmation orientée <strong>objet</strong> consiste à écrire des programmes en utilisant des objets. Un objet JavaScript est constitué d'un 
+						ensemble de propriétés. Une <strong>propriété</strong> est une association entre un nom et une valeur. Lorsque sa valeur est une fonction, on dit que 
+						la propriété est une <strong>méthode</strong> de l'objet.
+					</li>
+					<li>
+						JavaScript utilise les <strong>prototypes</strong> pour définir des modèles et partager des propriétés entre objets. Il s'agit d'une spécificité de 
+						ce langage.
+					</li>
+					<li>
+						Les <strong>tableaux</strong> permettent de regrouper des données. Comme les caractères d'une chaîne, les éléments d'un tableau sont identifiés par 
+						un indice débutant à zéro.
+					</li>
+			</ul>
+			</p>
+			<footer>
+				<a href="#sommaire">Retour</a>
+			</footer>
+		</section>
+		
+		</main>
+		
+		<footer>
+			<div>
+				<h4>Avec le soutien de l'USTHB</h4>
+		
+				<img src="../usthb.png"/>
+			</div>
+			<div id="suivezNous">
+				<h4>Suivez-nous !</h4>
+				<img alt="Facebook" src="../fb.png"/>
+				<img alt="RSS" src="../rss.png"/>
+				<img alt="Twitter" src="../twitter.png"/>
+				<img alt="Vimeo" src="../vimeo.png"/>
+				<img alt="Flickr" src="../flickr.png"/>
+			</div>	
+			<div id="contactezNous">
+				<h4>Contactez-nous</h4>
+				<address>
+					Email : auteur@gmail.com
+				</address>
+			</div>
+			Let's Learn | 2018 © Tous droits résérvés
+		</footer>
+	</body>
+</html>	
