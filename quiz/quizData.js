@@ -134,7 +134,6 @@ switch(pathname[pathname.length - 1]){
 }
 
 function insertQuestions(quiz){
-	var questionSection, question;
 	for(var questionNumber in quiz){
 		var questionSection = document.createElement("fieldset");
 		//creation de la question
