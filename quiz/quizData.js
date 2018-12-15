@@ -192,7 +192,9 @@ function insertQuestions(quiz){
     		alert("Vous avez eu un score de "+goodAnswers+" sur "+quiz.length+", appuyez sur OK pour voir vos mauvaises reponses ");
     	}else{
     		bravo.play();
-    		alert("Bravo ! Vous avez eu un score de "+goodAnswers+" sur "+quiz.length+", vous maitrisez ce langage !");
+    		setTimeout(function(){
+    			alert("Bravo ! Vous avez eu un score de "+goodAnswers+" sur "+quiz.length+", vous maitrisez ce langage !");
+    		}, 100);
     	}
     }
  });
