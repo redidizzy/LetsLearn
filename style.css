@@ -15,14 +15,12 @@ body{
 	margin : 0;
 	background :  #9a25e6;
 }
-
 /* --------------------------------------------------------*/
 /* tout ceci concerne le header de la page */
 #header_nav header img{
 	width : 150px;
 
 }
-
 #header_nav header h4{
 	margin-left : 20px;
 	margin-top: 0px;
@@ -57,12 +55,9 @@ body{
 	margin-bottom : 20px;
 	z-index : 3;
 }
-
 /* -------------------------------------------------------------------------- */
 
 /* Tout ceci concerne le navbar */
-
-
 #header_nav nav{
 	height : 70px;
 	float:right;
@@ -77,7 +72,6 @@ body{
 	margin-right : 80px;
 	
 }
-
 #header_nav nav li a {
 	display : block;
 	text-decoration: none;
@@ -111,7 +105,6 @@ body{
 	z-index : 2;
 	box-shadow: 2px 2px 10px;
 }
-
 #header_nav nav > ul > li > ul > li a{
 	color : #9a25e6;
 	display : block;
@@ -120,7 +113,6 @@ body{
 	color : #646fc1;
 	font-family : "BebasNeue";
 }
-
 #header_nav nav > ul > li> ul > li{
 	list-style-type:  none;
 }
@@ -131,7 +123,6 @@ main{
 	margin-bottom : 20px;
 	overflow:hidden;
 }
-
 #LL{
 	height: 400px;
 	margin-top : 50px;
@@ -196,7 +187,6 @@ main{
 	border-top-left-radius : 8px;
 	border-top-right-radius: 8px;
 }
-
 #cours{
 	clear:both;
 	
@@ -258,7 +248,6 @@ main aside {
 	border-radius : 10px;
 	height : 300px;
 }
-
 main aside#about{
 	width : 200px;
 	height : 300px;
@@ -282,7 +271,6 @@ main aside#about p{
 	text-align : center;
 	color : purple;
 }
-
 main aside#github{
 	width : 80%;
 	float : left;
@@ -311,7 +299,6 @@ main aside#github a[href^="https"]:hover{
 	color : cyan;
 	box-shadow : 2px 1px 50px;
 }
-
 /*--------------------------------------------------------------
 Tout ce qui concerne le footer */
 body > footer{
@@ -348,7 +335,6 @@ nav li a[href="#"] {
 				 inset 0px 3px 15px rgba(255,255,255,0.5); 
 	border-radius: 20px;
 }
-
 /* ----------------------------------------------------------------
 Tout ce qui concerne les cours */
 main#cours{
@@ -503,7 +489,6 @@ main#cours > #introduction > article{
 	margin-bottom : 10px;
 	list-style-type: circle;
 }
-
 #quizButton{
 	position : fixed;
 	right : 40px;
@@ -530,7 +515,6 @@ main#cours > #introduction > article{
 	background : linear-gradient(to bottom, #646fc1, rgb(209,179,207));
 	color : white;
 }
-
 /* -----------------------------------------------------------------------------
 Cette partie concernera les quiz */
 main#quiz{

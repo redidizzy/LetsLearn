@@ -166,6 +166,8 @@ function insertQuestions(quiz){
 	frag.appendChild(confirm);
 	main.appendChild(frag);
 	document.addEventListener('click',function(e){
+	if(e.target)
+		console.log("voila");
     if(e.target && e.target.id== 'confirm'){
     	e.preventDefault();
     	var goodAnswers = 0;
